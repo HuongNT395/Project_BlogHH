@@ -19,15 +19,15 @@ class LoginController extends Controller
     public function postLogin(UserRequest $request)
     {
 
-        $data = [
-            'email' =>$request->email,
-            'password'=>$request->password,
-            'active' =>1,
-        ];
-        if (Auth::attempt($data)) {
-            return redirect()->intended('/admin/theloai/danhsach');
-        } else {
-            return redirect()->intended('/home');
-        }
+           $data = [
+               'email' =>$request->email,
+               'password'=>$request->password,
+               'active' =>1,
+           ];
+            if (Auth::attempt($data)) {
+                return redirect()->intended('/admin/theloai/danhsach');
+            } else {
+                return redirect()->intended('/home');
+            }
     }
 }
