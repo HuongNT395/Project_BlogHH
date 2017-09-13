@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Blog HH</a>
+        <a class="navbar-brand" href="home">Blog HH</a>
     </div>
     <!-- /.navbar-header -->
 
@@ -23,7 +23,7 @@
                 <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                 </li>
                 <li class="divider"></li>
-                <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                <li><a href="home"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                 </li>
             </ul>
             <!-- /.dropdown-qluser -->
@@ -61,18 +61,20 @@
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>
-                <li>
-                    <a href="#"><i class="fa fa-cube fa-fw"></i> Post <span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="#">List Post</a>
-                        </li>
-                        <li>
-                            <a href="#">Add Post</a>
-                        </li>
-                    </ul>
+                {{--<li>--}}
+                    {{--<a href="#">--}}
+                        {{--<i class="fa fa-cube fa-fw"></i> Post <span class="fa arrow"></span>--}}
+                    {{--</a>--}}
+                    {{--<ul class="nav nav-second-level">--}}
+                        {{--<li>--}}
+                            {{--<a href="#">List Post</a>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                            {{--<a href="#">Add Post</a>--}}
+                        {{--</li>--}}
+                    {{--</ul>--}}
                     <!-- /.nav-second-level -->
-                </li>
+                {{--</li>--}}
                 <li>
                     <a href="#"><i class="fa fa-users fa-fw"></i> User<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
@@ -80,7 +82,7 @@
                             <a href="#">List User</a>
                         </li>
                         <li>
-                            <a href="#">Add User</a>
+                            <a href="#">Delete User</a>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
