@@ -1,7 +1,7 @@
 
-@extends('admin.layout.index');
+@extends('admin.layout.index')
+@section('content')
 
-@section('content');
 <!-- Page Content -->
 <div id="page-wrapper">
     <div class="container-fluid">
