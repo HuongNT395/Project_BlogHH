@@ -62,14 +62,14 @@ class TheLoaiController extends Controller
 
         $this->validate($request,
             [
-                'name'=>'required|unique:Categories,name|min:3|max:100'
-            ],
+            'name'=>'required|unique:Categories,name|min:3|max:100'
+        ],
             [
-                'name.required'=>'Ban chua nhap ten the loai',
+               'name.required'=>'Ban chua nhap ten the loai',
                 'name.unique'=>'Ten the loai da ton tai',
                 'name.min'=>'Ten the loai phai co do dai tu 3 den 100 ki tu',
                 'name.max'=>'Ten the loai phai co do dai tu 3 den 100 ki tu',
-            ]);
+        ]);
 
         $category->name = $request->name;
 //        echo $category->name;
