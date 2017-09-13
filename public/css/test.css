@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.col-md-1, .col-md-2, .col-md-3, .col-md-6 {
+    background-color: #eee;
+    border: 1px solid red;
+}

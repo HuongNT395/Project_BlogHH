@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+header {
+    width: 100%;
+    height:50px;
+    border: 1px solid #EEEEEE;
+}
+header div {
+    font-size: 14px;
+    padding: 15px 0;
+}
+.col-lg-5 {
+    font-size: 18px;
+    text-align: center;
+}
+nav {
+    width: 100%;
+    height: 50px;
+    clear: both;
+    border: 1px solid #EEEEEE;
+}
+nav ul {
+    list-style-type: none;
+}
+nav li {
+    display: inline-block;
+}
+nav li a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+nav li a:hover {
+    font-weight: 600;
+}
+article {
+    width: 100%;
+    height: 250px;
+    border: 1px solid #EEEEEE;
+    margin-bottom: 20px;
+}
+#text,
+#img {
+    width: 50%;
+    height: 100%;
+    float: left;
+    border: 1px solid #EEEEEE;
+    padding: 10px;
+}
+a button {
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 14px;
+    padding: 5px;
+    border: none;
+}
+#text p {
+    text-align: center;
+}
+#img img {
+    width: 100%;
+    height: 100%;
+}
+#tops {
+    height: auto;
+}
+#tops p {
+    width: 100%;
+    height: 44px;
+    border-bottom: 1px solid #EEEEEE;
+    /*padding: 10px;*/
+}
+#tops p a {
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px;
+    border-bottom: 2px solid #EEEEEE;
+}
+#tops .common {
+    width: 100%;
+    height: 300px;
+    float: left;
+}
+.common .image {
+    width: 40%;
+    height: 100%;
+    float: left;
+    border: 1px solid black;
+}
+.common .content {
+    width:60%;
+    height: 230px;
+    float: left;
+    border: 1px solid black;
+    overflow: hidden;
+    padding: 5px;
+}
+.common .author {
+    width: 60%;
+    height: 70px;
+    border: 1px solid black;
+    float: left;
+}
+#tops ul {
+    list-style-type: none;
+    width: 100%;
+    /*width: 50%;*/
+}
+#tops li {
+    display: inline-block;
+    width: 49%;
+    float: left;
+    margin: 10px 0.5%;
+}
+.content {
+
+}
+.common .image img {
+    width: 100%;
+    height: 100%;
+}
