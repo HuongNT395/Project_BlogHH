@@ -15,11 +15,7 @@
                     @endif
 
                     You are logged in!
-<<<<<<< HEAD
-=======
 
-                    Trang chu....
->>>>>>> a5297001a1bce07666e87ce177fa083cb782eec3
                 </div>
             </div>
         </div>

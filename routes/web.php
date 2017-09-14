@@ -60,25 +60,11 @@ Route::group(['prefix'=>'admin'],function () {
             Route::get('sua','PostController@getSua');
             Route::get('them','PostController@getThem');
         });
-
-
-
-<<<<<<< HEAD
-=======
-
-
 //        Route::get('login','LoginController@getLogin')->name('login');
 //        Route::post('login','LoginController@postLogin');
 //        Route::get('home','HomeController@getIndex');
 
 //Login
-    Auth::routes();
-
-    Route::get('/home', 'HomeController@index')->name('home');
-
-
->>>>>>> a5297001a1bce07666e87ce177fa083cb782eec3
-
 
 
 
