@@ -19,6 +19,9 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'post'], function() {
     Route::get('list', "PostController@getPost");
+    Route::get('like', "PostController@getPostLike")->name('post.like');
+    Route::get('fashion', "PostController@getAny1CategoryPost")->name('post.fashion');
+    Route::get('film', "PostController@getAnyCategoryPost")->name('post.film');
 });
 
 Route::group(['prefix'=>'admin'],function () {

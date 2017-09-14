@@ -27,6 +27,25 @@ class PostController extends Controller
         $users = UserController::getUser();
         return view('post.list', ["categories" => $categories, "users" => $users, "postsDay" => $postDay, "postsFilm" => $postFilm, "postsFashion" => $postFashion]);
     }
+    //xem tất cả bài viết theo số lượng like
+    public function getPostLike() {
+        $posts = Post::orderBy('like', 'asc')->paginate(10);
+        $categories = CategoryController::getCategory();
+        return view('post.like', ["posts" => $posts, "categories" => $categories]);
+    }
+
+    //xem tất cả bài viết của 1 category nào đó
+    public function getAnyCategoryPost() {
+        $posts = Post::where('category_id', 6)->paginate(10);
+        $categories = CategoryController::getCategory();
+        return view('post.film', ["posts" => $posts, "categories" => $categories]);
+    }
+
+    public function getAny1CategoryPost() {
+        $posts = Post::where('category_id', 3)->paginate(10);
+        $categories = CategoryController::getCategory();
+        return view('post.fashion', ["posts" => $posts, "categories" => $categories]);
+    }
 
     public function displayAPost(Request $request, $id) {
         $post = Post::find($id);
