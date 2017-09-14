@@ -16,7 +16,7 @@ class UsersTable extends Seeder
         $user->name = "Nguyen Thi Huong";
         $user->email = "huongnt1@nal.vn";
         $user->password = bcrypt("123456");
-        $user->avatar = "";
+        $user->avatar = "huong.jpg";
         $user->active = 1;
         $user->save();
 
@@ -24,7 +24,7 @@ class UsersTable extends Seeder
         $user1->name = "To Thi Thu Hoai";
         $user1->email = "hoaittt@nal.vn";
         $user1->password = bcrypt("123456");
-        $user1->avatar = "";
+        $user1->avatar = "hoai.jpg";
         $user1 ->active = 0;
         $user1->save();
     }

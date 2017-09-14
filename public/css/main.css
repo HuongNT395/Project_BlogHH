@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: medium-ui-sans-serif-text-font,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif!important;
+}
+body a {
+    text-decoration: none;
+}
+.container {
+    margin: 0;
+    padding: 0;
+}
+.row {
+    width: 100%;
+}
+
+/*start header*/
+header .col-md-3 {
+    font-size: 14px;
+    padding: 20px 5px 20px 20px;
+}
+header .col-md-4 {
+    font-size: 24px;
+    padding: 15px 0px;
+    text-align: center;
+}
+.col-md-5 form,
+.col-md-5 p {
+    float: right;
+    font-size: 14px;
+    padding: 20px 5px;
+}
+input[type=text] {
+    width: 100px;
+    box-sizing: border-box;
+    /*border: 2px solid #ccc;*/
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    background-color: white;
+    background-image: url('../storage/images/searchicon.png');
+    background-position: 5px 5px;
+    background-repeat: no-repeat;
+    margin-top: -5px;
+    padding: 5px 15px 5px 15px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+    width: 100%;
+}
+/*end header*/
+/*start nav*/
+nav {
+    width: 100%;
+    height: 50px;
+    clear: both;
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 20px;
+}
+nav ul {
+    list-style-type: none;
+}
+nav li {
+    display: inline-block;
+}
+nav li a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+nav li a:hover {
+    font-weight: 600;
+}
+/*end nav*/
+article {
+    position: relative;
+}
+/*start article introduce*/
+#introduce{
+    width: 100%;
+    height: 350px;
+    margin-bottom: 20px;
+}
+#introduce .col-md-6 {
+    height: 100%;
+}
+.col-md-6 img {
+    height: 100%;
+    width: 100%;
+}
+.img-responsive {
+    height: 100%;
+    width: 100%;
+}
+/*end article introduce*/
+#text,
+#img {
+    width: 50%;
+    height: 100%;
+    float: left;
+    border: 1px solid #EEEEEE;
+    padding: 10px;
+}
+a button {
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 14px;
+    padding: 5px;
+    border: none;
+}
+#text p {
+    text-align: center;
+}
+.tops {
+    height: auto;
+    margin-bottom: 20px;
+}
+.tops p {
+    width: 100%;
+    height: 44px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.tops p a {
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+.tops .common {
+    width: 100%;
+    height: 300px;
+    float: left;
+}
+.common .image {
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+.common .content {
+    width:60%;
+    height: 230px;
+    float: left;
+    border: 1px solid #eee;
+    border-bottom: none;
+    overflow: hidden;
+    padding: 5px;
+}
+.common .author {
+    width: 60%;
+    height: 70px;
+    border: 1px solid #eee;
+    border-top: none;
+    float: left;
+}
+.tops ul {
+    list-style-type: none;
+    width: 100%;
+}
+.tops li {
+    display: inline-block;
+    width: 49%;
+    float: left;
+    margin: 10px 0.5%;
+}
+.content {
+    padding: 10px 1px 10px 15px;
+}
+.common .image img {
+    width: 100%;
+    height: 100%;
+}
+/*start author*/
+.author .au {
+    width: 80%;
+    float: left;
+}
+.author .like {
+    width: 20%;
+    float: left;
+}
+.author {
+    padding: 15px;
+}
+.like form {
+    padding: 15px;
+    font-size: 14px;
+}
+.like form button {
+    border: none;
+    background-color: white;
+}
+#au_img {
+    width: 30%;
+    float: left;
+}
+#au_img img {
+    width: 50px;
+    height: 50px;
+}
+#au_info {
+    width: 70%;
+    float: left;
+}
+/*end author*/
+/*start footer*/
+footer {
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #0c0c0c;
+    color: white;
+}
+/*end footer*/

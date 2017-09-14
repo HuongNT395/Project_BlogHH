@@ -16,6 +16,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::group(['prefix' => 'post'], function() {
+    Route::get('list', "PostController@getPost");
+});
+
 Route::group(['prefix'=>'admin'],function () {
     //admin/theloai/sua
     Route::group(['prefix' => 'theloai'], function () {
@@ -58,6 +63,8 @@ Route::group(['prefix'=>'admin'],function () {
 
 
 
+<<<<<<< HEAD
+=======
 
 
 //        Route::get('login','LoginController@getLogin')->name('login');
@@ -70,5 +77,11 @@ Route::group(['prefix'=>'admin'],function () {
     Route::get('/home', 'HomeController@index')->name('home');
 
 
+>>>>>>> a5297001a1bce07666e87ce177fa083cb782eec3
 
 
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
