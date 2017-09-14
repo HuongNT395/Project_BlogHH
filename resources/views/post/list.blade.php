@@ -1,43 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
-    <title>News</title>
-</head>
-<body>
-<div class="container">
-    {{--start header--}}
-    <header class="row">
-        <div class="col-md-3">
-            <a href="">write a story</a>
-        </div>
-        <div class="col-md-4">
-            <a href="#">News</a>
-        </div>
-        <div class="col-md-5" style="text-align: center">
-            <form>
-                <input type="text" name="search" placeholder="Search">
-            </form>
-            <p><a href="">sign in</a> / <a href="#">sign up</a></p>
-        </div>
-    </header>
-    {{--end header--}}
-    {{--start nav--}}
-    <nav class="row">
-        <ul>
-            <li><a href="#">Home</a></li>
-            @foreach($categories as $category)
-                <li><a href="#">{{$category->name}}</a></li>
-            @endforeach
-        </ul>
-    </nav>
-    {{--end nav--}}
+@include('until/head')
     <article class="row" id="introduce">
         <div class="col-md-6">
             <h2>Interesting ideas that set your mind in motion.</h2>
@@ -54,7 +15,7 @@
     <article class="tops row">
         <p>
             <a><b>Tops story</b></a>
-            <a href="#" style="float: right"><b>More</b><span class="glyphicon glyphicon-chevron-right"></span></a>
+            <a href="{{route('post.like')}}" style="float: right"><b>More</b><span class="glyphicon glyphicon-chevron-right"></span></a>
         </p>
         <ul>
             @foreach($postsDay as $postDay)
@@ -93,7 +54,7 @@
     <article class="tops row">
         <p>
             <a><b>Films</b></a>
-            <a href="#" style="float: right"><b>More</b><span class="glyphicon glyphicon-chevron-right"></span></a>
+            <a href="{{route('post.film')}}" style="float: right"><b>More</b><span class="glyphicon glyphicon-chevron-right"></span></a>
         </p>
         <ul>
             @foreach($postsFilm as $postFilm)
@@ -132,7 +93,7 @@
     <article class="tops row">
         <p>
             <a href="#"><b>Fashion</b></a>
-            <a href="#" style="float: right"><b>More</b><span class="glyphicon glyphicon-chevron-right"></span></a>
+            <a href="{{route('post.fashion')}}" style="float: right"><b>More</b><span class="glyphicon glyphicon-chevron-right"></span></a>
         </p>
         <ul>
             @foreach($postsFashion as $postFashion)
@@ -168,11 +129,12 @@
             @endforeach
         </ul>
     </article>
-    <footer class="row">
-        @2017 - H2News Blog. All Right Reserved.<br>
-        Mọi hình thức sao chép nội dung trên website này mà chưa được sự đồng ý đều là trái phép.<br>
-        Giao diện thiết kế bởi <a href="mailto:street.demon95@gmail.com">HuongNT</a>
-    </footer>
-</div>
-</body>
-</html>
+@include('until/footer')
+    {{--<footer class="row">--}}
+        {{--@2017 - H2News Blog. All Right Reserved.<br>--}}
+        {{--Mọi hình thức sao chép nội dung trên website này mà chưa được sự đồng ý đều là trái phép.<br>--}}
+        {{--Giao diện thiết kế bởi <a href="mailto:street.demon95@gmail.com">HuongNT</a>--}}
+    {{--</footer>--}}
+{{--</div>--}}
+{{--</body>--}}
+{{--</html>--}}
