@@ -32,9 +32,9 @@
 
 <div id="wrapper">
 
-    @include('admin.layout.header');
+    @include('admin.layout.header')
 
-   @yield('content');
+   @yield('content')
 
 
 </div>
@@ -61,8 +61,8 @@
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
             responsive: true
-        });
-    });
+        })
+    })
 </script>
 <script type="text/javascript" language="javascript" src="admin_asset/ckeditor/ckeditor.js" ></script>
 </body>

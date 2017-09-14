@@ -42,18 +42,18 @@ Route::group(['prefix'=>'admin'],function () {
     //admin/qluser/sua
     Route::group(['prefix' => 'qluser'], function () {
         Route::get('danhsach', 'QLUserController@getDanhSach');
-        Route::get('sua', 'QLUserController@getSua');
-        Route::get('them', 'QLUserController@getThem');
+        Route::get('xoa/{id}', 'QLUserController@getXoa');
+        Route::post('xoa/{id}', 'QLUserController@postXoa');
     });
 });
 
 
-    Route::group(['prefix'=>'qluser'],function (){
-        //user/personal/sua
-        Route::group(['prefix'=>'personal'],function () {
-            Route::get('sua','PersonalController@getSua');
-            Route::get('them','PersonalController@getThem');
-        });
+//    Route::group(['prefix'=>'qluser'],function (){
+//        //user/personal/sua
+//        Route::group(['prefix'=>'personal'],function () {
+//            Route::get('sua','PersonalController@getSua');
+//            Route::get('them','PersonalController@getThem');
+//        });
         //user/post/them
         Route::group(['prefix'=>'post'],function () {
             Route::get('danhsach','PostController@getDanhSach');
@@ -62,8 +62,22 @@ Route::group(['prefix'=>'admin'],function () {
         });
 
 
-});
 
+<<<<<<< HEAD
+=======
+
+
+//        Route::get('login','LoginController@getLogin')->name('login');
+//        Route::post('login','LoginController@postLogin');
+//        Route::get('home','HomeController@getIndex');
+
+//Login
+    Auth::routes();
+
+    Route::get('/home', 'HomeController@index')->name('home');
+
+
+>>>>>>> a5297001a1bce07666e87ce177fa083cb782eec3
 
 
 

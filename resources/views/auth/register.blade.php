@@ -62,6 +62,17 @@
                         </div>
 
                         <div class="form-group">
+<<<<<<< HEAD
+=======
+                            <label for="active" class="col-md-4 control-label" hidden>Active</label>
+
+                            <div class="col-md-6">
+                                <input id="active" type="hidden" class="form-control" name="active" value="0">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+>>>>>>> a5297001a1bce07666e87ce177fa083cb782eec3
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Register

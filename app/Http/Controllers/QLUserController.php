@@ -10,38 +10,23 @@ class QLUserController extends Controller
     public function getDanhSach()
     {
         $user = User::all();
+        return view('admin.qluser.danhsach',['user'=>$user]);
     }
 
-    public function getThem()
-    {
 
-
-    }
-
-    public function postThem(Request $request)
-    {
-
-    }
 
 
     function getXoa(Request $request, $id)
     {
-
-    }
-
-    public function postXoa(Request $request, $id)
-    {
-
+        $user = User::find($id);
+        return view('admin.qluser.xoa',['user'=>$user]);
     }
 
 
-    public function getSua($id)
-    {
-
-
+    public function postXoa(Request $request, $id){
+        $user = User::find($id);
+        $user->delete();
+        return redirect('admin/qluser/danhsach')->with('thongbao','Xóa người dùng thành công');
     }
 
-    public function postSua(Request $request, $id){
-
-    }
 }

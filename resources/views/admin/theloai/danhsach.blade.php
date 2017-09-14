@@ -1,5 +1,5 @@
-@extends('admin.layout.index');
-@section('content');
+@extends('admin.layout.index')
+@section('content')
 <!-- Page Content -->
 <div id="page-wrapper">
     <div class="container-fluid">
@@ -27,14 +27,14 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="odd gradeX" align="center">
+                <tr class="odd gradeX">
                     @foreach($category as $cate)
                     <td>{{$cate->id}}</td>
                     <td>{{$cate->name}}</td>
                     <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/theloai/xoa/{{$cate->id}}"> Delete</a></td>
                     <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/theloai/sua/{{$cate->id}}">Edit</a></td>
                 </tr>
-                @endforeach;
+                @endforeach
                 </tbody>
             </table>
         </div>
