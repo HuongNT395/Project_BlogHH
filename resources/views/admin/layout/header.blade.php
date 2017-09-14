@@ -82,7 +82,7 @@
                             <a href="admin/qluser/danhsach">List User</a>
                         </li>
                         <li>
-                            <a href="admin/qluser/xoa">Delete User</a>
+                            <a href="admin/qluser/danhsach">Delete User</a>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
