@@ -21,6 +21,7 @@
         Route::get('list', "PostController@getPost");
     });
 
+    //admin
     Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function () {
         //admin/theloai/sua
         Route::group(['prefix' => 'theloai'], function () {
@@ -48,21 +49,18 @@
         });
     });
 
-        //    Route::group(['prefix'=>'qluser'],function (){
-        //        //user/personal/sua
-        //        Route::group(['prefix'=>'personal'],function () {
-        //            Route::get('sua','PersonalController@getSua');
-        //            Route::get('them','PersonalController@getThem');
-        //        });
+        //user
+    Route::group(['prefix'=>'user'],function () {
+        //user/information/sua
+        Route::group(['prefix' => 'information'], function () {
+            Route::get('danhsach', 'InformationUserController@getInformation');
+            Route::get('sua', 'InformationUserController@getSuaInformation');
+            Route::post('sua', 'InformationUserController@postInformation');
+        });
 
-            //user/post/them
-            Route::group(['prefix'=>'post'],function () {
-                Route::get('danhsach','PostController@getDanhSach');
-                Route::get('sua','PostController@getSua');
-                Route::get('them','PostController@getThem');
-            });
+    });
 
 
-//Login
+    //Login
         Auth::routes();
         Route::get('/home', 'HomeController@index')->name('home');

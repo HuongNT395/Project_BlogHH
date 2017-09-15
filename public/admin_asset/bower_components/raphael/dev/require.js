@@ -1186,7 +1186,7 @@ var requirejs, require, define;
         }
 
         /**
-         * Given an event from a script node, get the requirejs info from it,
+         * Given an event from a script node, get the requirejs information from it,
          * and then removes the event listeners on the node.
          * @param {Event} evt
          * @returns {Object}
@@ -1321,7 +1321,7 @@ var requirejs, require, define;
                 }
 
                 //If there are any "waiting to execute" modules in the registry,
-                //update the maps for them, since their info, like URLs to load,
+                //update the maps for them, since their information, like URLs to load,
                 //may have changed.
                 eachProp(registry, function (mod, id) {
                     //If module already has init called, since it is too
@@ -2048,6 +2048,6 @@ var requirejs, require, define;
         return eval(text);
     };
 
-    //Set up with config info.
+    //Set up with config information.
     req(cfg);
 }(this));

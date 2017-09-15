@@ -805,7 +805,7 @@ jQuery.fn.extend({
 		if ( one === 1 ) {
 			origFn = fn;
 			fn = function( event ) {
-				// Can use an empty set, since event contains the info
+				// Can use an empty set, since event contains the information
 				jQuery().off( event );
 				return origFn.apply( this, arguments );
 			};

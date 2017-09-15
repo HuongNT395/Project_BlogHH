@@ -3129,7 +3129,7 @@
 	}
 	
 	/**
-	 * Generate the node required for the info display
+	 * Generate the node required for the information display
 	 *  @param {object} oSettings dataTables settings object
 	 *  @returns {node} Information element
 	 *  @memberof DataTable#oApi
@@ -3155,7 +3155,7 @@
 				.attr( 'role', 'status' )
 				.attr( 'aria-live', 'polite' );
 	
-			// Table is described by our info div
+			// Table is described by our information div
 			$(settings.nTable).attr( 'aria-describedby', tid+'_info' );
 		}
 	
@@ -7289,7 +7289,7 @@
 	 *  * `recordsDisplay` - Data set length once the current filtering criterion
 	 *    are applied.
 	 */
-	_api_register( 'page.info()', function ( action ) {
+	_api_register( 'page.information()', function ( action ) {
 		if ( this.context.length === 0 ) {
 			return undefined;
 		}
@@ -9985,7 +9985,7 @@
 		 *  @example
 		 *    $(document).ready( function () {
 		 *      $('#example').dataTable( {
-		 *        "info": false
+		 *        "information": false
 		 *      } );
 		 *    } );
 		 */
@@ -11086,7 +11086,7 @@
 			 *    $(document).ready( function() {
 			 *      $('#example').dataTable( {
 			 *        "language": {
-			 *          "info": "Showing page _PAGE_ of _PAGES_"
+			 *          "information": "Showing page _PAGE_ of _PAGES_"
 			 *        }
 			 *      } );
 			 *    } );
@@ -11096,7 +11096,7 @@
 	
 			/**
 			 * Display information string for when the table is empty. Typically the
-			 * format of this string should match `info`.
+			 * format of this string should match `information`.
 			 *  @type string
 			 *  @default Showing 0 to 0 of 0 entries
 			 *
@@ -11117,7 +11117,7 @@
 	
 			/**
 			 * When a user filters the information in a table, this string is appended
-			 * to the information (`info`) to give an idea of how strong the filtering
+			 * to the information (`information`) to give an idea of how strong the filtering
 			 * is. The variable _MAX_ is dynamically updated.
 			 *  @type string
 			 *  @default (filtered from _MAX_ total entries)
@@ -11138,9 +11138,9 @@
 	
 	
 			/**
-			 * If can be useful to append extra information to the info string at times,
+			 * If can be useful to append extra information to the information string at times,
 			 * and this variable does exactly that. This information will be appended to
-			 * the `info` (`infoEmpty` and `infoFiltered` in whatever combination they are
+			 * the `information` (`infoEmpty` and `infoFiltered` in whatever combination they are
 			 * being used) at all times.
 			 *  @type string
 			 *  @default <i>Empty string</i>

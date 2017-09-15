@@ -1244,7 +1244,7 @@ if (!document.createElement('canvas').getContext) {
         textAlign = 'left';
     }
 
-    // 1.75 is an arbitrary number, as there is no info about the text baseline
+    // 1.75 is an arbitrary number, as there is no information about the text baseline
     switch (this.textBaseline) {
       case 'hanging':
       case 'top':
