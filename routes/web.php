@@ -19,6 +19,7 @@ Route::group(['prefix' => 'post'], function() {
     Route::get('fashion', "PostController@getAny1CategoryPost")->name('post.fashion');
     Route::get('film', "PostController@getAnyCategoryPost")->name('post.film');
     Route::get('liked/{id}', 'PostController@setLikeAPost')->name('post.actionLike');
+    Route::get('detail/{id}', "PostController@displayAPost")->name('post.detail');
 });
 
     //admin

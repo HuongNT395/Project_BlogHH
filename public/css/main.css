@@ -216,5 +216,36 @@ footer {
     text-align: center;
     background-color: #0c0c0c;
     color: white;
+    clear: both;
 }
 /*end footer*/
+/*start detail*/
+#author {
+    height: 120px;
+    border-top: 1px solid #eee;
+    margin-bottom: 20px;
+}
+.au_detail {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+}
+#author img {
+    float: right;
+    width: 100px;
+    height: 100px;
+    /*padding: 30px;*/
+}
+#author .col-md-9 {
+    padding: 15px;
+    font-size: 16px;
+}
+#images {
+    width: 100%;
+    height: 500px;
+    padding: 30px;
+}
+.content {
+
+}
+/*end detail*/

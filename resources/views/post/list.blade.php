@@ -22,12 +22,12 @@
                 <li class="col-md-6">
                     <div class="common">
                         <div class="image">
-                            <a href=""><img src="{{asset('storage/images/post/'.$postDay->image)}}"></a>
+                            <a href="{{route('post.detail', ['id'=>$postDay->id])}}"><img src="{{asset('storage/images/post/'.$postDay->image)}}"></a>
                         </div>
                         <div class="content">
-                            <h2><a href="">{{$postDay->title}}</a></h2>
+                            <h2><a href="{{route('post.detail', ['id'=>$postDay->id])}}">{{$postDay->title}}</a></h2>
                             <h5>{{$postDay->summary}}</h5>
-                            <a href="#" style="float: right">Xem chi tiết</a>
+                            <a href="{{route('post.detail', ['id'=>$postDay->id])}}" style="float: right">Xem chi tiết</a>
                         </div>
                         <div class="author">
                             <div class="au">
@@ -60,12 +60,12 @@
                 <li class="col-md-6">
                     <div class="common">
                         <div class="image">
-                            <a href=""><img src="{{asset('storage/images/post/'.$postFilm->image)}}"></a>
+                            <a href="{{route('post.detail', ['id'=>$postFilm->id])}}"><img src="{{asset('storage/images/post/'.$postFilm->image)}}"></a>
                         </div>
                         <div class="content">
-                            <h2><a href="">{{$postFilm->title}}</a></h2>
+                            <h2><a href="{{route('post.detail', ['id'=>$postFilm->id])}}">{{$postFilm->title}}</a></h2>
                             <h5>{{$postFilm->summary}}</h5>
-                            <a href="#" style="float: right">Xem chi tiết</a>
+                            <a href="{{route('post.detail', ['id'=>$postFilm->id])}}" style="float: right">Xem chi tiết</a>
                         </div>
                         <div class="author">
                             <div class="au">
@@ -98,12 +98,12 @@
                 <li class="col-md-6">
                     <div class="common">
                         <div class="image">
-                            <a href=""><img src="{{asset('storage/images/post/'.$postFashion->image)}}"></a>
+                            <a href="{{route('post.detail', ['id'=>$postFashion->id])}}"><img src="{{asset('storage/images/post/'.$postFashion->image)}}"></a>
                         </div>
                         <div class="content">
-                            <h2><a href="">{{$postFashion->title}}</a></h2>
+                            <h2><a href="{{route('post.detail', ['id'=>$postFashion->id])}}">{{$postFashion->title}}</a></h2>
                             <h5>{{$postFashion->summary}}</h5>
-                            <a href="#" style="float: right">Xem chi tiết</a>
+                            <a href="{{route('post.detail', ['id'=>$postFashion->id])}}" style="float: right">Xem chi tiết</a>
                         </div>
                         <div class="author">
                             <div class="au">
