@@ -20,13 +20,22 @@ class PostController extends Controller
     }
 
     public function getPost() {
-        $postDay = Post::orderBy('updated_at','asc')->paginate(2);
+        $postDay = Post::orderBy('like','desc')->paginate(2);
         $postFilm = Post::where('category_id',6)->paginate(2);
         $postFashion = Post::where('category_id',3)->paginate(2);
         $categories = CategoryController::getCategory();
         $users = UserController::getUser();
         return view('post.list', ["categories" => $categories, "users" => $users, "postsDay" => $postDay, "postsFilm" => $postFilm, "postsFashion" => $postFashion]);
     }
+
+    //xem post theo category
+//    public function getCategoryPost($category) {
+//        $categories = CategoryController::getCategory();
+//        $users = UserController::getUser();
+//        $posts = Post::where('category_id', $category->id)->paginate(2);
+//        return view('post.list', ["categories" => $categories, "users" => $users, "posts" => $posts]);
+//    }
+
     //xem tất cả bài viết theo số lượng like
     public function getPostLike() {
         $posts = Post::orderBy('like', 'asc')->paginate(10);
@@ -50,5 +59,13 @@ class PostController extends Controller
     public function displayAPost(Request $request, $id) {
         $post = Post::find($id);
         return view('post.detail', ["post" => $post]);
+    }
+
+    //like a post
+    public function setLikeAPost(Request $request, $id) {
+        $post = Post::find($id);
+        $post->like++;
+        $post->save();
+        return redirect(route('post.list'));
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+use App\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,24 +12,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-    Route::get('/', function () {
-        return view('welcome');
-    });
-
-
+  //liên quan đến post
 Route::group(['prefix' => 'post'], function() {
-    Route::get('list', "PostController@getPost");
+    Route::get('list', "PostController@getPost")->name('post.list');
     Route::get('like', "PostController@getPostLike")->name('post.like');
     Route::get('fashion', "PostController@getAny1CategoryPost")->name('post.fashion');
     Route::get('film', "PostController@getAnyCategoryPost")->name('post.film');
+    Route::get('liked/{id}', 'PostController@setLikeAPost')->name('post.actionLike');
 });
-
-
-    Route::group(['prefix' => 'post'], function() {
-        Route::get('list', "PostController@getPost");
-    });
 
     Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function () {
         //admin/theloai/sua

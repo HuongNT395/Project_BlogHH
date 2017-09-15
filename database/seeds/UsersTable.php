@@ -13,7 +13,7 @@ class UsersTable extends Seeder
     public function run()
     {
         $user = new User();
-        $user->name = "Nguyen Thi Huong";
+        $user->name = "Nguyễn Thị Hương";
         $user->email = "huongnt1@nal.vn";
         $user->password = bcrypt("123456");
         $user->avatar = "huong.jpg";
@@ -21,7 +21,7 @@ class UsersTable extends Seeder
         $user->save();
 
         $user1 = new User();
-        $user1->name = "To Thi Thu Hoai";
+        $user1->name = "Tô Thị Thu Hoài";
         $user1->email = "hoaittt@nal.vn";
         $user1->password = bcrypt("123456");
         $user1->avatar = "hoai.jpg";
