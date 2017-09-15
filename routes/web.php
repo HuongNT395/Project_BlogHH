@@ -58,6 +58,17 @@ Route::group(['prefix' => 'post'], function() {
             Route::post('sua', 'InformationUserController@postInformation');
         });
 
+        //user/post/sua
+        Route::group(['prefix' => 'post'], function () {
+            Route::get('danhsach', 'PostUserController@getDanhSach');
+            Route::get('them', 'PostUserController@getThem');
+            Route::post('them', 'PostUserController@postThem');
+            Route::get('sua', 'PostUserController@getSua');
+            Route::post('sua', 'PostUserController@postSua');
+            Route::get('xoa', 'PostUserController@getXoa');
+            Route::post('xoa', 'PostUserController@postXoa');
+        });
+
     });
 
 
