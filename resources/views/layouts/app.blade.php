@@ -28,15 +28,10 @@
                     </button>
 
                     <!-- Branding Image -->
-<<<<<<< HEAD
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-=======
+
                     <a class="navbar-brand">
                         BlogHH
-                        {{--href="{{ url('/') }}">--}}
-                        {{--{{ config('app.name', 'Laravel') }}--}}
->>>>>>> a5297001a1bce07666e87ce177fa083cb782eec3
+
                     </a>
                 </div>
 
@@ -64,6 +59,11 @@
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                             Logout
+                                        </a>
+                                        <a href="../user/information/sua"
+                                           onclick="event.preventDefault();
+                                                     document.getElementById('sua-form').submit();">
+                                            Sửa thông tin cá nhân
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

@@ -236,7 +236,7 @@
     getTimezoneInfo: function () {
       if (this._useCache) return this._tzInfo;
       var res;
-      // If timezone is specified, get the correct timezone info based on the Date given
+      // If timezone is specified, get the correct timezone information based on the Date given
       if (this.timezone) {
         res = this.timezone === 'Etc/UTC' || this.timezone === 'Etc/GMT'
           ? { tzOffset: 0, tzAbbr: 'UTC' }

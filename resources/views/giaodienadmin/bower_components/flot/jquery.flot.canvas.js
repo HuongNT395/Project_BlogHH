@@ -116,7 +116,7 @@ browser, but needs to redraw with canvas text when exporting as an image.
 			context.restore();
 		};
 
-		// Creates (if necessary) and returns a text info object.
+		// Creates (if necessary) and returns a text information object.
 		//
 		// When the canvas option is set, the object looks like this:
 		//
@@ -216,7 +216,7 @@ browser, but needs to redraw with canvas text when exporting as an image.
 
 				textStyle = font.style + " " + font.variant + " " + font.weight + " " + font.size + "px " + font.family;
 
-				// Create a new info object, initializing the dimensions to
+				// Create a new information object, initializing the dimensions to
 				// zero so we can count them up line-by-line.
 
 				info = styleCache[text] = {

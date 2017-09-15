@@ -275,7 +275,7 @@ Licensed under the MIT license.
 		return layer;
 	};
 
-	// Creates (if necessary) and returns a text info object.
+	// Creates (if necessary) and returns a text information object.
 	//
 	// The object looks like this:
 	//
@@ -302,18 +302,18 @@ Licensed under the MIT license.
 	// text is constant no matter where it is placed; the placements are a
 	// secondary property.
 	//
-	// Canvas maintains a cache of recently-used text info objects; getTextInfo
+	// Canvas maintains a cache of recently-used text information objects; getTextInfo
 	// either returns the cached element or creates a new entry.
 	//
 	// @param {string} layer A string of space-separated CSS classes uniquely
 	//     identifying the layer containing this text.
-	// @param {string} text Text string to retrieve info for.
+	// @param {string} text Text string to retrieve information for.
 	// @param {(string|object)=} font Either a string of space-separated CSS
 	//     classes or a font-spec object, defining the text's font and style.
 	// @param {number=} angle Angle at which to rotate the text, in degrees.
 	//     Angle is currently unused, it will be implemented in the future.
 	// @param {number=} width Maximum width of the text before it wraps.
-	// @return {object} a text info object.
+	// @return {object} a text information object.
 
 	Canvas.prototype.getTextInfo = function(layer, text, font, angle, width) {
 
@@ -539,7 +539,7 @@ Licensed under the MIT license.
                     min: null, // min. value to show, null means set automatically
                     max: null, // max. value to show, null means set automatically
                     autoscaleMargin: null, // margin in % to add if auto-setting min/max
-                    ticks: null, // either [1, 3] or [[1, "a"], 3] or (fn: axis info -> ticks) or app. number of ticks for auto-ticks
+                    ticks: null, // either [1, 3] or [[1, "a"], 3] or (fn: axis information -> ticks) or app. number of ticks for auto-ticks
                     tickFormatter: null, // fn: number -> string
                     labelWidth: null, // size of tick labels in pixels
                     labelHeight: null,
@@ -1183,7 +1183,7 @@ Licensed under the MIT license.
                             val = points[k + m];
                             if (val != null) {
                                 f = format[m];
-                                // extract min/max info
+                                // extract min/max information
                                 if (f.autoscale !== false) {
                                     if (f.x) {
                                         updateAxis(s.xaxis, val, val);
