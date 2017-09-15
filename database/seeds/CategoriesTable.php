@@ -33,7 +33,7 @@ class CategoriesTable extends Seeder
         $category1->save();
 
         $category1 = new Category();
-        $category1->name = 'Firm';
+        $category1->name = 'Film';
         $category1->save();
 
         $category1 = new Category();

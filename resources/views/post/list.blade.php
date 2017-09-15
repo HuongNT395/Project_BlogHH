@@ -40,10 +40,8 @@
                                 </div>
                             </div>
                             <div class="like">
-                                <form action="#" method="post">
-                                    <button type="button" name="like"><span class="glyphicon glyphicon-thumbs-up"></span></button>
-                                    <label name="number">{{$postDay->like}}</label>
-                                </form>
+                                <a href="{{route('post.actionLike', ['id'=>$postDay->id])}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
+                                <label name="number">{{$postDay->like}}</label>
                             </div>
                         </div>
                     </div>
@@ -51,6 +49,7 @@
             @endforeach
         </ul>
     </article>
+    {{--@foreach($categories as $category)--}}
     <article class="tops row">
         <p>
             <a><b>Films</b></a>
@@ -79,10 +78,8 @@
                                 </div>
                             </div>
                             <div class="like">
-                                <form action="#" method="post">
-                                    <button type="button" name="like"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+                                    <a href="{{route('post.actionLike', ['id'=>$postFilm->id])}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
                                     <label name="number">{{$postFilm->like}}</label>
-                                </form>
                             </div>
                         </div>
                     </div>
@@ -90,6 +87,7 @@
             @endforeach
         </ul>
     </article>
+    {{--@endforeach--}}
     <article class="tops row">
         <p>
             <a href="#"><b>Fashion</b></a>
@@ -118,10 +116,8 @@
                                 </div>
                             </div>
                             <div class="like">
-                                <form action="#" method="post">
-                                    <button type="button" name="like"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+                                    <a href="{{route('post.actionLike', ['id'=>$postFashion->id])}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
                                     <label name="number">{{$postFashion->like}}</label>
-                                </form>
                             </div>
                         </div>
                     </div>
