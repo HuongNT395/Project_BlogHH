@@ -90,9 +90,6 @@ Route::group(['prefix' => 'post/logged', 'middleware' => 'auth'], function () {
         Route::get('/home', 'HomeController@index')->name('home');
 
     //fb
-Route::get('auth/{provider}', 'Auth\SocialController@redirectToProvider');
-Route::get('auth/{provider}/callback', 'Auth\SocialController@handleProviderCallback');
-
-Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('auth/{provider}', 'Auth\SocialController@redirectToProvider');
+    Route::get('auth/{provider}/callback', 'Auth\SocialController@handleProviderCallback');
 
