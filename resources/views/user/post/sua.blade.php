@@ -1,5 +1,4 @@
-@extends('user.layout.index')
-@section('content')
+@include('until/logged/header')
     <!-- Page Content -->
     <div id="page-wrapper">
         <div class="container">
@@ -81,6 +80,5 @@
     </div>
     <!-- /#page-wrapper -->
 
-@endsection
 
 
