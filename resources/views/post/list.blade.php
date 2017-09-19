@@ -26,7 +26,7 @@
                         </div>
                         <div class="content">
                             <h2><a href="{{route('post.detail', ['id'=>$postDay->id])}}">{{$postDay->title}}</a></h2>
-                            <h5>{{$postDay->summary}}</h5>
+                            <h5>{!! $postDay->summary !!}</h5>
                             <a href="{{route('post.detail', ['id'=>$postDay->id])}}" style="float: right">Xem chi tiết</a>
                         </div>
                         <div class="author">
@@ -126,11 +126,3 @@
         </ul>
     </article>
 @include('until/footer')
-    {{--<footer class="row">--}}
-        {{--@2017 - H2News Blog. All Right Reserved.<br>--}}
-        {{--Mọi hình thức sao chép nội dung trên website này mà chưa được sự đồng ý đều là trái phép.<br>--}}
-        {{--Giao diện thiết kế bởi <a href="mailto:street.demon95@gmail.com">HuongNT</a>--}}
-    {{--</footer>--}}
-{{--</div>--}}
-{{--</body>--}}
-{{--</html>--}}

@@ -32,8 +32,16 @@ class InformationUserController extends Controller
     $user = Auth::user();
     $user->name = $request->name;
     $user->email = $request->email;
-    $user->avatar = $request->avatar;
-//        echo $user->password;
+        $user->avatar = $request->avatar;
+        if($request->hasFile('avatar')) {
+            $fileName = $request->avatar->getClientOriginalName();
+            $request->avatar->storeAS('public/images/avartar',$fileName);
+            $user->avatar = $fileName;
+        } else {
+            return "Not file selected";
+        }
+
+
     if(isset($request->password)){
 
         $this->validate($request,[

@@ -16,6 +16,8 @@
     <img id="images" class="img-responsive" src="{{asset('storage/images/post/'. $post->image)}}">
     <h1>{{$post->title}}</h1>
     {!!  $post->content !!}
+    <h1>{!! $post->summary !!}</h1>
+    <h4>{!! $post->content !!}</h4>
 </article>
 <div class="fb-comments" data-href="http://localhost:8000/post/detail/" data-numposts="5" style="margin-top: 50px"></div>
 @include('until/footer')

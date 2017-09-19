@@ -26,7 +26,7 @@
                          </div>
                      @endif
 
-                     <form action="sua" method="post">
+                     <form action="sua" method="post" enctype="multipart/form-data">
                          <input type="hidden" name="_token" value={{csrf_token()}}>
                          <div>
                              <label>Họ tên</label>
@@ -42,7 +42,8 @@
                          <div>
                              <label>Avatar</label>
                              <div>
-                                 <img class="img-circle" alt="" width="80" height="60" src="/storage/images/avartar/{{$user->avatar}}">
+                                 <img class="img-circle" alt="" width="80" height="60"
+                                      src="/storage/images/avartar/{{$user->avatar}}">
                              </div>
                              <div>
                                  <input type="file" class="form-control"
@@ -91,5 +92,7 @@
         {{--})--}}
     {{--</script>--}}
 {{--@endsection--}}
+
+
 
 
