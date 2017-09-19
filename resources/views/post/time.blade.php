@@ -27,7 +27,7 @@
                             </div>
                         </div>
                         <div class="like">
-                            <a href="{{route('post.actionLikeList', ['id'=>$post->id])}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
+                            <a href="{{route('post.actionLike', ['id'=>$post->id])}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
                             <label name="number">{{$post->like}}</label>
                         </div>
                     </div>

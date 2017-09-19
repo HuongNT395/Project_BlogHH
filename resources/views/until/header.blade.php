@@ -25,7 +25,7 @@
     {{--start header--}}
     <header class="row">
         <div class="col-md-3">
-            <a href="">write a story</a>
+            <a href="{{route('post.logged.addForm')}}">write a story</a>
         </div>
         <div class="col-md-4">
             <a href="#">News</a>

@@ -1,7 +1,7 @@
 @include('until/head')
 <article class="tops row">
     <p>
-        <a><b>Tops story</b></a>
+        <a><b>Posts by category</b></a>
         {{--<a href="#" style="float: right"><b>More</b><span class="glyphicon glyphicon-chevron-right"></span></a>--}}
     </p>
     <ul>
@@ -27,7 +27,7 @@
                             </div>
                         </div>
                         <div class="like">
-                            <a href="{{route('post.actionLikeList', ['id'=>$post->id])}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
+                            <a href="{{route('post.actionLike', ['id'=>$post->id])}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
                             <label name="number">{{$post->like}}</label>
                         </div>
                     </div>

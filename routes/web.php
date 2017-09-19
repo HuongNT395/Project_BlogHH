@@ -15,16 +15,23 @@ use App\Post;
   //liên quan đến post
 Route::group(['prefix' => 'post'], function() {
     Route::get('list', "PostController@getPost")->name('post.list');
-    Route::get('logged/list', "PostController@getPostLogged")->name('post.logged.list');
-    Route::get('like', "PostController@getPostLike")->name('post.like');
-    Route::get('fashion', "PostController@getAny1CategoryPost")->name('post.fashion');
-    Route::get('film', "PostController@getAnyCategoryPost")->name('post.film');
-    Route::get('liked/{id}', 'PostController@setLikeAPost')->name('post.actionLike');
+    Route::get('like', "PostController@getPostByLike")->name('post.like');
+    Route::get('category', "PostController@getPostByCategory")->name('post.category');
+    Route::get('time', "PostController@getPostTime")->name('post.time');
+    Route::get('liked/{id}', 'PostController@setLikeAPostList')->name('post.actionLikeList');
     Route::get('detail/{id}', "PostController@displayAPost")->name('post.detail');
 });
-Route::group(['prefix' => 'post/logged'], function () {
-    Route::get('addPost', "PostController@addFormPost");
-    Route::post('addPost', "PostController@addedPost")->name('post.logged.added');
+
+//đã đăng nhập
+Route::group(['prefix' => 'post/logged', 'middleware' => 'auth'], function () {
+    Route::get('list', "LoggedPostController@getPostLogged")->name('post.logged.list');
+    Route::get('addPost', "LoggedPostController@addFormPost")->name('post.logged.addForm');
+    Route::post('addPost', "LoggedPostController@addedPost")->name('post.logged.added');
+    Route::get('like', "LoggedPostController@getPostByLike")->name('post.logged.like');
+    Route::get('category', "LoggedPostController@getPostByCategory")->name('post.logged.category');
+    Route::get('time', "LoggedPostController@getPostTime")->name('post.logged.time');
+    Route::get('detail/{id}', "LoggedPostController@displayAPost")->name('post.logged.detail');
+
 });
 
     //admin
@@ -86,10 +93,3 @@ Route::group(['prefix' => 'post/logged'], function () {
     Route::get('auth/{provider}', 'Auth\SocialController@redirectToProvider');
     Route::get('auth/{provider}/callback', 'Auth\SocialController@handleProviderCallback');
 
-    Auth::routes();
-
-    Route::get('/home', 'HomeController@index')->name('home');
-
-    Auth::routes();
-
-    Route::get('/home', 'HomeController@index')->name('home');

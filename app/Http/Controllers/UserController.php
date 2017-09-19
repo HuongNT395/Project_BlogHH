@@ -9,7 +9,7 @@ use Laravel\Socialite\Facades\Socialite;
 
 class UserController extends Controller
 {
-    public static function getUser() {
+    public static function getUsers() {
         $user = User::all();
         return $user;
     }

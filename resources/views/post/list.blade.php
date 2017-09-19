@@ -14,7 +14,7 @@
     </article>
     <article class="tops row">
         <p>
-            <a><b>Tops story</b></a>
+            <a><b>Tops story by like</b></a>
             <a href="{{route('post.like')}}" style="float: right"><b>More</b><span class="glyphicon glyphicon-chevron-right"></span></a>
         </p>
         <ul>
@@ -40,7 +40,7 @@
                                 </div>
                             </div>
                             <div class="like">
-                                <a href="{{route('post.actionLike', ['id'=>$postDay->id])}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
+                                <a href="{{route('post.actionLikeList', ['id'=>$postDay->id])}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
                                 <label name="number">{{$postDay->like}}</label>
                             </div>
                         </div>
@@ -52,34 +52,34 @@
     {{--@foreach($categories as $category)--}}
     <article class="tops row">
         <p>
-            <a><b>Films</b></a>
-            <a href="{{route('post.film')}}" style="float: right"><b>More</b><span class="glyphicon glyphicon-chevron-right"></span></a>
+            <a><b>Tops story by time</b></a>
+            <a href="{{route('post.time')}}" style="float: right"><b>More</b><span class="glyphicon glyphicon-chevron-right"></span></a>
         </p>
         <ul>
-            @foreach($postsFilm as $postFilm)
+            @foreach($postsTime as $postTime)
                 <li class="col-md-6">
                     <div class="common">
                         <div class="image">
-                            <a href="{{route('post.detail', ['id'=>$postFilm->id])}}"><img src="{{asset('storage/images/post/'.$postFilm->image)}}"></a>
+                            <a href="{{route('post.detail', ['id'=>$postTime->id])}}"><img src="{{asset('storage/images/post/'.$postTime->image)}}"></a>
                         </div>
                         <div class="content">
-                            <h2><a href="{{route('post.detail', ['id'=>$postFilm->id])}}">{{$postFilm->title}}</a></h2>
-                            <h5>{{$postFilm->summary}}</h5>
-                            <a href="{{route('post.detail', ['id'=>$postFilm->id])}}" style="float: right">Xem chi tiết</a>
+                            <h2><a href="{{route('post.detail', ['id'=>$postTime->id])}}">{{$postTime->title}}</a></h2>
+                            <h5>{{$postTime->summary}}</h5>
+                            <a href="{{route('post.detail', ['id'=>$postTime->id])}}" style="float: right">Xem chi tiết</a>
                         </div>
                         <div class="author">
                             <div class="au">
                                 <div id="au_img">
-                                    <img src="{{asset('storage/images/avartar/'.$postFilm->user->avatar)}}" class="img-circle">
+                                    <img src="{{asset('storage/images/avartar/'.$postTime->user->avatar)}}" class="img-circle">
                                 </div>
                                 <div id="au_info">
-                                    <a href="#">{{$postFilm->user->name}}</a><br>
-                                    <i>{{$postFilm->updated_at}}</i>
+                                    <a href="#">{{$postTime->user->name}}</a><br>
+                                    <i>{{$postTime->updated_at}}</i>
                                 </div>
                             </div>
                             <div class="like">
-                                    <a href="{{route('post.actionLike', ['id'=>$postFilm->id])}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
-                                    <label name="number">{{$postFilm->like}}</label>
+                                    <a href="{{route('post.actionLikeList', ['id'=>$postTime->id])}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
+                                    <label name="number">{{$postTime->like}}</label>
                             </div>
                         </div>
                     </div>
@@ -90,34 +90,34 @@
     {{--@endforeach--}}
     <article class="tops row">
         <p>
-            <a href="#"><b>Fashion</b></a>
-            <a href="{{route('post.fashion')}}" style="float: right"><b>More</b><span class="glyphicon glyphicon-chevron-right"></span></a>
+            <a href="#"><b>Tops story by category</b></a>
+            <a href="{{route('post.category')}}" style="float: right"><b>More</b><span class="glyphicon glyphicon-chevron-right"></span></a>
         </p>
         <ul>
-            @foreach($postsFashion as $postFashion)
+            @foreach($postsCategory as $postCategory)
                 <li class="col-md-6">
                     <div class="common">
                         <div class="image">
-                            <a href="{{route('post.detail', ['id'=>$postFashion->id])}}"><img src="{{asset('storage/images/post/'.$postFashion->image)}}"></a>
+                            <a href="{{route('post.detail', ['id'=>$postCategory->id])}}"><img src="{{asset('storage/images/post/'.$postCategory->image)}}"></a>
                         </div>
                         <div class="content">
-                            <h2><a href="{{route('post.detail', ['id'=>$postFashion->id])}}">{{$postFashion->title}}</a></h2>
-                            <h5>{{$postFashion->summary}}</h5>
-                            <a href="{{route('post.detail', ['id'=>$postFashion->id])}}" style="float: right">Xem chi tiết</a>
+                            <h2><a href="{{route('post.detail', ['id'=>$postCategory->id])}}">{{$postCategory->title}}</a></h2>
+                            <h5>{{$postCategory->summary}}</h5>
+                            <a href="{{route('post.detail', ['id'=>$postCategory->id])}}" style="float: right">Xem chi tiết</a>
                         </div>
                         <div class="author">
                             <div class="au">
                                 <div id="au_img">
-                                    <img src="{{asset('storage/images/avartar/'.$postFashion->user->avatar)}}" class="img-circle">
+                                    <img src="{{asset('storage/images/avartar/'.$postCategory->user->avatar)}}" class="img-circle">
                                 </div>
                                 <div id="au_info">
-                                    <a href="#">{{$postFashion->user->name}}</a><br>
-                                    <i>{{$postFashion->updated_at}}</i>
+                                    <a href="#">{{$postCategory->user->name}}</a><br>
+                                    <i>{{$postCategory->updated_at}}</i>
                                 </div>
                             </div>
                             <div class="like">
-                                    <a href="{{route('post.actionLike', ['id'=>$postFashion->id])}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
-                                    <label name="number">{{$postFashion->like}}</label>
+                                    <a href="{{route('post.actionLikeList', ['id'=>$postCategory->id])}}"><span class="glyphicon glyphicon-thumbs-up"></span></a>
+                                    <label name="number">{{$postCategory->like}}</label>
                             </div>
                         </div>
                     </div>

@@ -26,7 +26,7 @@
     {{--start header--}}
     <header class="row">
         <div class="col-md-3">
-            <a href="">write a story</a>
+            <a href="{{route('post.logged.addForm')}}">write a story</a>
         </div>
         <div class="col-md-4">
             <a href="#">News</a>
@@ -37,6 +37,7 @@
             </form>
             <p>
                 <img class="img-circle" src="http://graph.facebook.com/{{Auth::user()->provider_id}}/picture" style="width: 40px; height: 40px">
+                {{--<img class="img-circle" src="{{asset('storage/images/avartar/'.Auth::user()->avatar)}}" style="width: 40px; height: 40px">--}}
                 <a href="" id="author_name">{{Auth::user()->name}}</a>
             </p>
         </div>
