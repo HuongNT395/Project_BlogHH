@@ -12,7 +12,7 @@
                 <!-- /.col-lg-12 -->
                 <div class="col-lg-7" style="padding-bottom:120px">
 
-                    <h2 style="color: red">Are you sure delete?</h2>
+                    <h2 style="color: red">Are you sure delete this user?</h2>
 
                     <form action="admin/qluser/xoa/{{$user->id}}" method="post">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
@@ -21,8 +21,9 @@
                             <input type="text" class="form-control" name="name" value="{{$user->name}}" disabled="disabled" />
                         </div>
 
-                        <button type="submit" class="btn btn-default">Xoa User</button>
-                        <button type="reset" class="btn btn-default">Reset</button>
+                        <button type="submit" class="btn btn-default">Delete User</button>
+                        <input type="button"  value="Cancel" class="btn btn-default"
+                               onclick="location.href='admin/qluser/danhsach'">
                     </form>
                 </div>
             </div>

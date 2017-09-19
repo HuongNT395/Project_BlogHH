@@ -31,22 +31,22 @@
                          <div>
                              <label>Họ tên</label>
                              <input type="text" class="form-control" placeholder="Username"
-                                    name="name" aria-describedby="basic-addon1" value={{$user->name}}>
+                                    name="name" aria-describedby="basic-addon1" value="{{$user->name}}">
                          </div>
                          <br>
                          <div>
                              <label>Email</label>
                              <input type="email" class="form-control" placeholder="Email"
-                                    name="email" aria-describedby="basic-addon1" value={{$user->email}}>
+                                    name="email" aria-describedby="basic-addon1" value="{{$user->email}}">
                          </div>
                          <div>
                              <label>Avatar</label>
                              <div>
-                                 <img class="img-circle" alt="" width="80" height="60"
+                                 <img class="img-circle" alt="" width="80" height="70"
                                       src="/storage/images/avartar/{{$user->avatar}}">
                              </div>
                              <div>
-                                 <input type="file" class="form-control"
+                                 <input type="file" class="form"
                                         name="avatar" aria-describedby="basic-addon1"
                                         value="">
                              </div>
@@ -79,20 +79,6 @@
  </div>
  <!-- end Page Content -->
 @endsection
-{{--@section('script')--}}
-    {{--<script>--}}
-        {{--$(document).ready(function () {--}}
-            {{--$("#changePassword").change(function () {--}}
-                {{--if($(this).is(":checked")){--}}
-                    {{--$(".password").removeAttr('disabled');--}}
-                {{--}else{--}}
-                    {{--$(".password").attr('disabled',"");--}}
-                {{--}--}}
-            {{--})--}}
-        {{--})--}}
-    {{--</script>--}}
-{{--@endsection--}}
-
 
 
 

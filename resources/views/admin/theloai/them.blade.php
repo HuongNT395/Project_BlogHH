@@ -37,7 +37,8 @@
 
 
                     <button type="submit" class="btn btn-default">Category Add</button>
-                    <button type="reset" class="btn btn-default">Reset</button>
+                    <input type="button" value="Cancle" class=" btn btn-default"
+                           onclick="location.href='admin/theloai/danhsach'">
                     </form>
             </div>
         </div>
