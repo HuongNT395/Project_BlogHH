@@ -15,6 +15,7 @@
 <article class="contents row">
     <img id="images" class="img-responsive" src="{{asset('storage/images/post/'. $post->image)}}">
     <h1>{{$post->title}}</h1>
-    <h4>{{$post->content}}</h4>
+    <h1>{!! $post->summary !!}</h1>
+    <h4>{!! $post->content !!}</h4>
 </article>
 @include('until/footer')

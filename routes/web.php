@@ -61,13 +61,13 @@ Route::group(['prefix' => 'post'], function() {
 
         //user/post/sua
         Route::group(['prefix' => 'post'], function () {
-            Route::get('danhsach', 'PostUserController@getDanhSach');
+            Route::get('danhsach', 'PostUserController@getDanhSach')->name('user.post.list');
             Route::get('them', 'PostUserController@getThem');
             Route::post('them', 'PostUserController@postThem');
-            Route::get('sua', 'PostUserController@getSua');
-            Route::post('sua', 'PostUserController@postSua');
-            Route::get('xoa', 'PostUserController@getXoa');
-            Route::post('xoa', 'PostUserController@postXoa');
+            Route::get('sua/{id}', 'PostUserController@getSua');
+            Route::post('sua/{id}', 'PostUserController@postSua');
+            Route::get('xoa/{id}', 'PostUserController@getXoa');
+            Route::post('xoa/{id}', 'PostUserController@postXoa')->name('user.post.delete');
         });
 
     });

@@ -40,7 +40,7 @@ class InformationUserController extends Controller
         } else {
             return "Not file selected";
         }
-//        $post->save();
+
 
     if(isset($request->password)){
 
