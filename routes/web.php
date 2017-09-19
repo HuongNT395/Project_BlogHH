@@ -15,11 +15,16 @@ use App\Post;
   //liên quan đến post
 Route::group(['prefix' => 'post'], function() {
     Route::get('list', "PostController@getPost")->name('post.list');
+    Route::get('logged/list', "PostController@getPostLogged")->name('post.logged.list');
     Route::get('like', "PostController@getPostLike")->name('post.like');
     Route::get('fashion', "PostController@getAny1CategoryPost")->name('post.fashion');
     Route::get('film', "PostController@getAnyCategoryPost")->name('post.film');
     Route::get('liked/{id}', 'PostController@setLikeAPost')->name('post.actionLike');
     Route::get('detail/{id}', "PostController@displayAPost")->name('post.detail');
+});
+Route::group(['prefix' => 'post/logged'], function () {
+    Route::get('addPost', "PostController@addFormPost");
+    Route::post('addPost', "PostController@addedPost")->name('post.logged.added');
 });
 
     //admin
@@ -65,3 +70,15 @@ Route::group(['prefix' => 'post'], function() {
     //Login
         Auth::routes();
         Route::get('/home', 'HomeController@index')->name('home');
+
+    //fb
+Route::get('auth/{provider}', 'Auth\SocialController@redirectToProvider');
+Route::get('auth/{provider}/callback', 'Auth\SocialController@handleProviderCallback');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

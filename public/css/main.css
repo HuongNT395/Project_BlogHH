@@ -18,6 +18,9 @@ body a {
 }
 
 /*start header*/
+header {
+    border-bottom: 1px solid #eee;
+}
 header .col-md-3 {
     font-size: 14px;
     padding: 20px 5px 20px 20px;
@@ -249,3 +252,9 @@ footer {
 
 }
 /*end detail*/
+#author_name:hover {
+
+}
+.add_post {
+    border:  1px solid #eee;
+}
