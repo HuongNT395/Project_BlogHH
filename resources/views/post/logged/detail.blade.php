@@ -1,4 +1,4 @@
-@include('until/logged/header')
+@include('until/logged/head')
 <article id="author" class="row">
     <div class="au_detail">
         <div class="col-md-3">

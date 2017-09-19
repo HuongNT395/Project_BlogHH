@@ -38,7 +38,7 @@
             <p>
                 <img class="img-circle" src="http://graph.facebook.com/{{Auth::user()->provider_id}}/picture" style="width: 40px; height: 40px">
                 {{--<img class="img-circle" src="{{asset('storage/images/avartar/'.Auth::user()->avatar)}}" style="width: 40px; height: 40px">--}}
-                <a href="" id="author_name">{{Auth::user()->name}}</a>
+                <a href="{{route('user.post.list')}}" id="author_name">{{Auth::user()->name}}</a>
             </p>
         </div>
     </header>

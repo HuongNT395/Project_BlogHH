@@ -1,4 +1,4 @@
-@include('until/header')
+@include('until/head')
 <article id="author" class="row">
     <div class="au_detail">
         <div class="col-md-3">

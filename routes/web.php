@@ -31,6 +31,7 @@ Route::group(['prefix' => 'post/logged', 'middleware' => 'auth'], function () {
     Route::get('category', "LoggedPostController@getPostByCategory")->name('post.logged.category');
     Route::get('time', "LoggedPostController@getPostTime")->name('post.logged.time');
     Route::get('detail/{id}', "LoggedPostController@displayAPost")->name('post.logged.detail');
+    Route::get('category/{id}', "LoggedPostController@displayByCategory")->name('post.logged.byCategory');
 
 });
 
