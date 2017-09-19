@@ -83,13 +83,13 @@ Route::group(['prefix' => 'post/logged'], function () {
         Route::get('/home', 'HomeController@index')->name('home');
 
     //fb
-Route::get('auth/{provider}', 'Auth\SocialController@redirectToProvider');
-Route::get('auth/{provider}/callback', 'Auth\SocialController@handleProviderCallback');
+    Route::get('auth/{provider}', 'Auth\SocialController@redirectToProvider');
+    Route::get('auth/{provider}/callback', 'Auth\SocialController@handleProviderCallback');
 
-Auth::routes();
+    Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+    Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/home', 'HomeController@index')->name('home');
