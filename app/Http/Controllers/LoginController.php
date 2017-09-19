@@ -27,7 +27,7 @@ class LoginController extends Controller
             if (Auth::attempt($data)) {
                 return redirect()->intended('/admin/theloai/danhsach');
             } else {
-                return redirect()->intended('/home');
+                return redirect()->intended('/post/list');
             }
     }
 }
