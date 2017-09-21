@@ -1,6 +1,3 @@
-
-
-
 @include('until.header')
 
 <article id="author" class="row">

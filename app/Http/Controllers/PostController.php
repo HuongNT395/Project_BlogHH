@@ -68,7 +68,8 @@ class PostController extends Controller
 
     public function displayAPost(Request $request, $id) {
         $post = Post::find($id);
-        return view('post.detail', ["post" => $post]);
+        $categories = Category::all();
+        return view('post.detail', ["post" => $post, 'category'=>$categories]);
     }
 
     //like a post
