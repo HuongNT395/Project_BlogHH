@@ -1,5 +1,4 @@
-@extends('user.layout.index')
-@section('content')
+@include('until/logged/header')
 <!-- Page Content -->
 <div id="page-wrapper">
     <div class="container">
@@ -24,12 +23,12 @@
                     </div>
                 @endif
 
-                <form action="user/post/them" method="post" enctype="multipart/form-data">
+                <form action="{{route('added')}}" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="_token" value={{csrf_token()}}>
                     <div class="form-group">
                         <label>Thể loại</label>
                         <select class="form-control" name="category">
-                            @foreach($category as $cate)
+                            @foreach($categories as $cate)
                             <option value={{$cate->id}}>{{$cate->name}}</option>
                             @endforeach
                         </select>
@@ -72,4 +71,3 @@
 </div>
 <!-- /#page-wrapper -->
 
-@endsection

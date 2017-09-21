@@ -30,9 +30,9 @@ class LoginController extends Controller
                 return redirect()->intended('/post/logged/list');
             }
     }
-        public function logout(Request $request) {
-            Auth::logout();
-            return redirect('/');
-        }
 
+    public function logout() {
+        Auth::logout();
+        return redirect('/');
+    }
 }

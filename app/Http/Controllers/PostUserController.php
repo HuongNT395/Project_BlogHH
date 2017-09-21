@@ -18,7 +18,7 @@ class PostUserController extends Controller
 
     public function getThem(){
         $category = Category::all();
-        return view('user.post.them',['category'=>$category]);
+        return view('user.post.them',['categories'=>$category]);
 
     }
 
@@ -59,7 +59,9 @@ class PostUserController extends Controller
         $post->user_id = Auth::user()->id;
         $post->category_id = $request->category;
        $post->save();
-        return redirect('user/post/danhsach')->with('thongbao','Bạn đã thêm bài thành công');
+
+        return redirect(route('user.post.list'))->with('thongbao','Bạn đã thêm bài thành công');
+       
 
     }
 

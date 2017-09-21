@@ -76,8 +76,8 @@ Route::group(['prefix' => 'post/logged', 'middleware' => 'auth'], function () {
         //user/post/sua
         Route::group(['prefix' => 'post'], function () {
             Route::get('danhsach', 'PostUserController@getDanhSach')->name('user.post.list');
-            Route::get('them', 'PostUserController@getThem');
-            Route::post('them', 'PostUserController@postThem');
+            Route::get('them', 'PostUserController@getThem')->name('addPost');
+            Route::post('them', 'PostUserController@postThem')->name('added');
             Route::get('sua/{id}', 'PostUserController@getSua');
             Route::post('sua/{id}', 'PostUserController@postSua');
             Route::get('xoa/{id}', 'PostUserController@getXoa');

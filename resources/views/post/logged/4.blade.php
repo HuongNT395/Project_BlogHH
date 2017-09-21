@@ -22,7 +22,7 @@
                                 <img src="{{asset('storage/images/avartar/'.$post->user->avatar)}}" class="img-circle">
                             </div>
                             <div id="au_info">
-                                <a href="#">{{$post->user->name}}</a><br>
+                                <a href="{{route('user.post.list')}}">{{$post->user->name}}</a><br>
                                 <i>{{$post->updated_at}}</i>
                             </div>
                         </div>

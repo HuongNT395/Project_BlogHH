@@ -9,23 +9,19 @@
                             </div>
                         @endif
             @foreach($post as $p)
-            <div>
+            <div class="disPost">
                 <div class="form-group">
-                <h3><center><b>{!!$p->title!!}</b></center></h3>
+                <h3 style="text-align: center"><b><a href="#">{!!$p->title!!}</a></b></h3>
                 </div>
 
-                <div class="form-group">
-                    {!!$p->summary!!}
-                </div>
-
-                <div class="form-group">
+                <div class="form-group" style="float: left; width: 30%; padding: 5px">
                     <div>
                         <img alt="" width="100%" height="400"
                              src="/storage/images/post/{{$p->image}}">
                     </div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" style="float: left; width: 70%; padding: 5px 15px; font-size: 16px">
                     {!!$p->content!!}
                 </div>
 
@@ -37,13 +33,13 @@
                 {{--<div class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="sua/{{$p->id}}"> Sửa bài viết </a></div>--}}
                 {{--<div class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="xoa/{{$p->id}}"> Xóa bài viết </a></div>--}}
                 <br>
+            </div>
                 @endForeach
-        </div>
     </div>
     <!-- /.row -->
     </div>
     <!-- /.container-fluid -->
     </div>
     <!-- /#page-wrapper -->
+@include('until/footer')
 
-{{--@endsection--}}
