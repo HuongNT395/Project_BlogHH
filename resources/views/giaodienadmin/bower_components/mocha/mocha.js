@@ -4445,7 +4445,7 @@ Runner.prototype.grep = function(re, invert){
 };
 
 /**
- * Returns the number of tests matching the grep search for the
+ * Returns the number of tests matching the grep searchs for the
  * given suite.
  *
  * @param {Suite} suite

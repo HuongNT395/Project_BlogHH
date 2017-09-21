@@ -33,7 +33,7 @@
         {{--</div>--}}
         {{--<div class="col-md-5" style="text-align: center">--}}
             {{--<form>--}}
-                {{--<input type="text" name="search" placeholder="Search" style="margin-top: 5px">--}}
+                {{--<input type="text" name="searchs" placeholder="Search" style="margin-top: 5px">--}}
             {{--</form>--}}
             {{--<p>--}}
                 {{--<img class="img-circle" src="http://graph.facebook.com/{{Auth::user()->provider_id}}/picture" style="width: 40px; height: 40px">--}}

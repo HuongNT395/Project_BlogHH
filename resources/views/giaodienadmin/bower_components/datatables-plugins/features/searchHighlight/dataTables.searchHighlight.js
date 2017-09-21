@@ -13,9 +13,9 @@
  * 
  * License      MIT - http://datatables.net/license/mit
  *
- * This feature plug-in for DataTables will highlight search terms in the
- * DataTable as they are entered into the main search input element, or via the
- * `search()` API method.
+ * This feature plug-in for DataTables will highlight searchs terms in the
+ * DataTable as they are entered into the main searchs input element, or via the
+ * `searchs()` API method.
  *
  * It depends upon the jQuery Highlight plug-in by Bartek Szopka:
  * 	  http://bartaz.github.io/sandbox.js/jquery.highlight.js
@@ -48,7 +48,7 @@ $(document).on( 'init.dt.dth', function (e, settings, json) {
 	) {
 		table
 			.on( 'draw.dt.dth column-visibility.dt.dth', function () {
-				// On each draw highlight search results, removing the old ones
+				// On each draw highlight searchs results, removing the old ones
 				body.unhighlight();
 
 				// Don't highlight the "not found" row

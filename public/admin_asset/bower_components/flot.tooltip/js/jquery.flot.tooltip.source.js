@@ -138,8 +138,8 @@
                     var xBeforeIndex = 0,
                         xAfterIndex = -1;
 
-                    // Our search here assumes our data is sorted via the x-axis.
-                    // TODO: Improve efficiency somehow - search smaller sets of data.
+                    // Our searchs here assumes our data is sorted via the x-axis.
+                    // TODO: Improve efficiency somehow - searchs smaller sets of data.
                     for (var j = 1; j < series.data.length; j++) {
                         if (series.data[j - 1][0] <= pos.x && series.data[j][0] >= pos.x) {
                             xBeforeIndex = j - 1;
