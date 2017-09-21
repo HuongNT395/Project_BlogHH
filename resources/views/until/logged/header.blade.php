@@ -8,8 +8,9 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
+    <link href="{{asset('icon.ico')}}" rel="shortcut icon">
     <script type="application/javascript" src="{{asset('ckeditor/ckeditor.js')}}"></script>
-    <title>News</title>
+    <title>H2News</title>
 </head>
 <body>
 <div id="fb-root"></div>
@@ -39,8 +40,10 @@
                 <p>
                     <img class="img-circle" src="http://graph.facebook.com/{{Auth::user()->provider_id}}/picture" style="width: 40px; height: 40px">
                     {{--<img class="img-circle" src="{{asset('storage/images/avartar/'.Auth::user()->avatar)}}" style="width: 40px; height: 40px">--}}
+
                     <a href="{{route('user.post.list')}}" id="author_name">{{Auth::user()->name}}</a> /
-                    <a href="">Logout</a>
+                    <a href="{{route('user.post.list')}}" id="author_name">{{Auth::user()->name}}</a> /  <a href="{{route('login')}}" >Logout</a>
+
                 </p>
             </div>
         </header>

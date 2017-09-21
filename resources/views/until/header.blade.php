@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
+    <link href="{{asset('icon.ico')}}" rel="shortcut icon">
     <title>News</title>
 </head>
 <body>
@@ -24,7 +25,8 @@
             <form>
                 <input type="text" name="search" placeholder="Search">
             </form>
-            <p><a href="/login">sign in</a> / <a href="/login">sign up</a></p>
+
+            <p><a href="{{route('login')}}">sign in</a> / <a href="{{route('login')}}">sign up</a></p>
         </div>
     </header>
     {{--end header--}}
