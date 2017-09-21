@@ -60,8 +60,8 @@
                     </div>
 
                     <div style="text-align: center">
-                        <button type="submit" class="btn btn-default">Thêm bài viết</button>
-                        <input type="button" value="Quay lại" class="btn btn-default" onclick="location.href='../user/post/danhsach'">
+                        <button type="submit" class="btn btn-info" style="color: white">Thêm bài viết</button>
+                        <input type="button" value="Quay lại" class="btn btn-info" onclick="location.href='../user/post/danhsach'">
                     </div>
                     </form>
             </div>

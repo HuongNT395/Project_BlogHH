@@ -48,7 +48,7 @@
 
                     <!-- Branding Image -->
 
-                    <a class="navbar-brand">
+                    <a class="navbar-brand" href="/post/logged/list">
                         BlogHH
 
                     </a>
@@ -74,14 +74,12 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="{{ route('logout') }}"
+                                        <a href="/post/list"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
-                                        <a href="../user/information/sua"
-                                           onclick="event.preventDefault();
-                                                     document.getElementById('sua-form').submit();">
+                                        <a href="/user/information/sua">
                                             Sửa thông tin cá nhân
                                         </a>
 

@@ -8,9 +8,17 @@
         }
     ?>
     <div class="container">
+
         <div class="form-group">
             <h3><b>Search : {{$keyword}}</b></h3>
         </div>
+
+        @if (session('alert'))
+            <div class="alert alert-success">
+                {{ session('alert') }}
+            </div>
+        @endif
+
         @foreach($post as $p)
             <div>
                 <div class="form-group" style="color: blue; font-size: 20px">
