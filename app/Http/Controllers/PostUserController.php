@@ -59,7 +59,7 @@ class PostUserController extends Controller
         $post->user_id = Auth::user()->id;
         $post->category_id = $request->category;
        $post->save();
-        return redirect('user/post/them')->with('thongbao','Bạn đã thêm bài thành công');
+        return redirect('user/post/danhsach')->with('thongbao','Bạn đã thêm bài thành công');
 
     }
 
