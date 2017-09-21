@@ -63,7 +63,7 @@ Route::group(['prefix' => 'post/logged', 'middleware' => 'auth'], function () {
     });
 
         //user
-    Route::group(['prefix'=>'user'],function () {
+    Route::group(['prefix'=>'user','middleware'=>'userLogin'],function () {
         //user/information/sua
         Route::group(['prefix' => 'information'], function () {
             Route::get('danhsach', 'InformationUserController@getInformation');
