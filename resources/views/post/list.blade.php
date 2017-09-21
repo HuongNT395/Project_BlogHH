@@ -1,4 +1,4 @@
-@include('until/head')
+@include('until.header')
     <article class="row" id="introduce">
         <div class="col-md-6">
             <h2>Interesting ideas that set your mind in motion.</h2>

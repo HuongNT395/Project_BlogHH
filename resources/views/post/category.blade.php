@@ -1,4 +1,4 @@
-@include('until/head')
+@include('until.header')
 <article class="tops row">
     <p>
         <a><b>Posts by category</b></a>
