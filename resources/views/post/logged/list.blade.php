@@ -1,6 +1,6 @@
-@include('until/logged/head')
+@include('until/logged/header')
 <article class="row" id="introduce">
-    <div class="col-md-6">
+    <div class="col-md-6 col-sm-6">
         <h2>Interesting ideas that set your mind in motion.</h2>
         <h4>Hear directly from the people who know it best. From tech to politics to creativity and more — whatever your interest, we’ve got you covered.</h4>
         <p>
@@ -8,7 +8,7 @@
             <a href="#"><button>Learn more</button></a>
         </p>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 col-sm-6">
         <img src="{{asset('storage/images/post/tuoi22.jpg')}}" class="img-responsive">
     </div>
 </article>
@@ -19,8 +19,8 @@
     </p>
     <ul>
         @foreach($postsDay as $postDay)
-            <li class="col-md-6">
-                <div class="common">
+            <li>
+                <div class="common col-md-6 col-xs-12">
                     <div class="image">
                         <a href="{{route('post.logged.detail', ['id'=>$postDay->id])}}"><img src="{{asset('storage/images/post/'.$postDay->image)}}"></a>
                     </div>

@@ -37,3 +37,11 @@
             <p><a href="">sign in</a> / <a href="#">sign up</a></p>
         </div>
     </header>
+    <nav class="row">
+        <ul>
+            <li><a href="">Home</a></li>
+            @foreach($categories as $category)
+                <li><a href="#">{{$category->name}}</a></li>
+            @endforeach
+        </ul>
+    </nav>

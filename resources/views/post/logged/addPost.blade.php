@@ -1,4 +1,4 @@
-@include('until/logged/head')
+@include('until/logged/header')
 <div class="container-fluid" style="margin-top: 20px">
     <form  method="post" enctype="multipart/form-data">
         {{csrf_field()}}
