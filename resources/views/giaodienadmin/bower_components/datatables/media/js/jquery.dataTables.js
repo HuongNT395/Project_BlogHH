@@ -4,7 +4,7 @@
 
 /**
  * @summary     DataTables
- * @description Paginate, search and order HTML tables
+ * @description Paginate, searchs and order HTML tables
  * @version     1.10.4
  * @file        jquery.dataTables.js
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
@@ -452,7 +452,7 @@
 		_fnCompatMap( init, 'pageLength',    'iDisplayLength' );
 		_fnCompatMap( init, 'searching',     'bFilter' );
 	
-		// Column search objects are in an array, so it needs to be converted
+		// Column searchs objects are in an array, so it needs to be converted
 		// element by element
 		var searchCols = init.aoSearchCols;
 	
@@ -588,7 +588,7 @@
 		} );
 		oSettings.aoColumns.push( oCol );
 	
-		// Add search object for column specific search. Note that the `searchCols[ iCol ]`
+		// Add searchs object for column specific searchs. Note that the `searchCols[ iCol ]`
 		// passed into extend can be undefined. This allows the user to give a default
 		// with only some of the parameters defined, and also not give a default
 		var searchCols = oSettings.aoPreSearchCols;
@@ -2726,7 +2726,7 @@
 		var language = settings.oLanguage;
 		var previousSearch = settings.oPreviousSearch;
 		var features = settings.aanFeatures;
-		var input = '<input type="search" class="'+classes.sFilterInput+'"/>';
+		var input = '<input type="searchs" class="'+classes.sFilterInput+'"/>';
 	
 		var str = language.sSearch;
 		str = str.match(/_INPUT_/) ?
@@ -2769,7 +2769,7 @@
 			.val( previousSearch.sSearch )
 			.attr( 'placeholder', language.sSearchPlaceholder )
 			.bind(
-				'keyup.DT search.DT input.DT paste.DT cut.DT',
+				'keyup.DT searchs.DT input.DT paste.DT cut.DT',
 				searchDelay ?
 					_fnThrottle( searchFn, searchDelay ) :
 					searchFn
@@ -2803,7 +2803,7 @@
 	/**
 	 * Filter the table using both the global filter and column based filtering
 	 *  @param {object} oSettings dataTables settings object
-	 *  @param {object} oSearch search information
+	 *  @param {object} oSearch searchs information
 	 *  @param {int} [iForce] force a research of the master array (1) or not (undefined or 0)
 	 *  @memberof DataTable#oApi
 	 */
@@ -2892,7 +2892,7 @@
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {string} sInput string to filter on
 	 *  @param {int} iColumn column to filter
-	 *  @param {bool} bRegex treat search string as a regular expression or not
+	 *  @param {bool} bRegex treat searchs string as a regular expression or not
 	 *  @param {bool} bSmart use smart filtering or not
 	 *  @param {bool} bCaseInsensitive Do case insenstive matching or not
 	 *  @memberof DataTable#oApi
@@ -2947,7 +2947,7 @@
 			settings.aiDisplay = displayMaster.slice();
 		}
 		else {
-			// New search - start from the master array
+			// New searchs - start from the master array
 			if ( invalidated ||
 				 force ||
 				 prevSearch.length > input.length ||
@@ -2972,7 +2972,7 @@
 	
 	/**
 	 * Build a regular expression object suitable for searching a table
-	 *  @param {string} sSearch string to search for
+	 *  @param {string} sSearch string to searchs for
 	 *  @param {bool} bRegex treat as a regular expression or not
 	 *  @param {bool} bSmart perform smart filtering or not
 	 *  @param {bool} bCaseInsensitive Do case insensitive matching or not
@@ -2986,7 +2986,7 @@
 			_fnEscapeRegex( search );
 		
 		if ( smart ) {
-			/* For smart filtering we want to allow the search to work regardless of
+			/* For smart filtering we want to allow the searchs to work regardless of
 			 * word order. We also want double quoted text to be preserved, so word
 			 * order is important - a la google. So this is what we want to
 			 * generate:
@@ -5297,7 +5297,7 @@
 		 *      // Filter to rows with 'Webkit' in them, add a background colour and then
 		 *      // remove the filter, thus highlighting the 'Webkit' rows only.
 		 *      oTable.fnFilter('Webkit');
-		 *      oTable.$('tr', {"search": "applied"}).css('backgroundColor', 'blue');
+		 *      oTable.$('tr', {"searchs": "applied"}).css('backgroundColor', 'blue');
 		 *      oTable.fnFilter('');
 		 *    } );
 		 */
@@ -5349,10 +5349,10 @@
 		 *
 		 *      // Filter to 'Webkit' and get all data for
 		 *      oTable.fnFilter('Webkit');
-		 *      var data = oTable._('tr', {"search": "applied"});
+		 *      var data = oTable._('tr', {"searchs": "applied"});
 		 *
 		 *      // Do something with the data
-		 *      alert( data.length+" rows matched the search" );
+		 *      alert( data.length+" rows matched the searchs" );
 		 *    } );
 		 */
 		this._ = function ( sSelector, oOpts )
@@ -7525,7 +7525,7 @@
 		}
 	
 		// Backwards compatibility for 1.9- which used the terminology filter rather
-		// than search
+		// than searchs
 		if ( opts.filter && ! opts.search ) {
 			opts.search = opts.filter;
 		}
@@ -7582,7 +7582,7 @@
 		}
 		else if ( page == 'current' ) {
 			// Current page implies that order=current and fitler=applied, since it is
-			// fairly senseless otherwise, regardless of what order and search actually
+			// fairly senseless otherwise, regardless of what order and searchs actually
 			// are
 			for ( i=settings._iDisplayStart, ien=settings.fnDisplayEnd() ; i<ien ; i++ ) {
 				a.push( displayFiltered[i] );
@@ -7590,10 +7590,10 @@
 		}
 		else if ( order == 'current' || order == 'applied' ) {
 			a = search == 'none' ?
-				displayMaster.slice() :                      // no search
+				displayMaster.slice() :                      // no searchs
 				search == 'applied' ?
-					displayFiltered.slice() :                // applied search
-					$.map( displayMaster, function (el, i) { // removed search
+					displayFiltered.slice() :                // applied searchs
+					$.map( displayMaster, function (el, i) { // removed searchs
 						return $.inArray( el, displayFiltered ) === -1 ? el : null;
 					} );
 		}
@@ -7761,7 +7761,7 @@
 				}
 			}
 	
-			// Remove the target row from the search array
+			// Remove the target row from the searchs array
 			var displayIndex = $.inArray( row, settings.aiDisplay );
 	
 			// Delete from the display arrays
@@ -8678,7 +8678,7 @@
 	
 	
 	
-	_api_register( 'search()', function ( input, regex, smart, caseInsen ) {
+	_api_register( 'searchs()', function ( input, regex, smart, caseInsen ) {
 		var ctx = this.context;
 	
 		if ( input === undefined ) {
@@ -8705,8 +8705,8 @@
 	
 	
 	_api_registerPlural(
-		'columns().search()',
-		'column().search()',
+		'columns().searchs()',
+		'column().searchs()',
 		function ( input, regex, smart, caseInsen ) {
 			return this.iterator( 'column', function ( settings, column ) {
 				var preSearch = settings.aoPreSearchCols;
@@ -9100,7 +9100,7 @@
 	
 	/**
 	 * Template object for the way in which DataTables holds information about
-	 * search information for the global filter and individual column filters.
+	 * searchs information for the global filter and individual column filters.
 	 *  @namespace
 	 */
 	DataTable.models.oSearch = {
@@ -9112,14 +9112,14 @@
 		"bCaseInsensitive": true,
 	
 		/**
-		 * Applied search term
+		 * Applied searchs term
 		 *  @type string
 		 *  @default <i>Empty string</i>
 		 */
 		"sSearch": "",
 	
 		/**
-		 * Flag to indicate if the search term should be interpreted as a
+		 * Flag to indicate if the searchs term should be interpreted as a
 		 * regular expression (true) or not (false) and therefore and special
 		 * regex characters escaped.
 		 *  @type boolean
@@ -9198,7 +9198,7 @@
 		 * Filtering data cache. This is the same as the cell filtering cache, but
 		 * in this case a string rather than an array. This is easily computed with
 		 * a join on `_aFilterData`, but is provided as a cache so the join isn't
-		 * needed on every search (memory traded for performance)
+		 * needed on every searchs (memory traded for performance)
 		 *  @type array
 		 *  @default null
 		 *  @private
@@ -9830,10 +9830,10 @@
 	
 	
 		/**
-		 * Basically the same as `search`, this parameter defines the individual column
+		 * Basically the same as `searchs`, this parameter defines the individual column
 		 * filtering state at initialisation time. The array must be of the same size
 		 * as the number of columns, and each element be an object with the parameters
-		 * `search` and `escapeRegex` (the latter is optional). 'null' is also
+		 * `searchs` and `escapeRegex` (the latter is optional). 'null' is also
 		 * accepted and the default will be used.
 		 *  @type array
 		 *  @default []
@@ -9846,9 +9846,9 @@
 		 *      $('#example').dataTable( {
 		 *        "searchCols": [
 		 *          null,
-		 *          { "search": "My filter" },
+		 *          { "searchs": "My filter" },
 		 *          null,
-		 *          { "search": "^[0-9]", "escapeRegex": false }
+		 *          { "searchs": "^[0-9]", "escapeRegex": false }
 		 *        ]
 		 *      } );
 		 *    } )
@@ -10793,8 +10793,8 @@
 		 *        "serverSide": true,
 		 *        "ajax": "scripts/server_processing.php",
 		 *        "deferLoading": [ 57, 100 ],
-		 *        "search": {
-		 *          "search": "my_filter"
+		 *        "searchs": {
+		 *          "searchs": "my_filter"
 		 *        }
 		 *      } );
 		 *    } );
@@ -11317,7 +11317,7 @@
 			 *    $(document).ready( function() {
 			 *      $('#example').dataTable( {
 			 *        "language": {
-			 *          "search": "Filter records:"
+			 *          "searchs": "Filter records:"
 			 *        }
 			 *      } );
 			 *    } );
@@ -11327,7 +11327,7 @@
 			 *    $(document).ready( function() {
 			 *      $('#example').dataTable( {
 			 *        "language": {
-			 *          "search": "Apply filter _INPUT_ to table"
+			 *          "searchs": "Apply filter _INPUT_ to table"
 			 *        }
 			 *      } );
 			 *    } );
@@ -11336,7 +11336,7 @@
 	
 	
 			/**
-			 * Assign a `placeholder` attribute to the search `input` element
+			 * Assign a `placeholder` attribute to the searchs `input` element
 			 *  @type string
 			 *  @default 
 			 *
@@ -11396,9 +11396,9 @@
 	
 		/**
 		 * This parameter allows you to have define the global filtering state at
-		 * initialisation time. As an object the `search` parameter must be
+		 * initialisation time. As an object the `searchs` parameter must be
 		 * defined, but all other parameters are optional. When `regex` is true,
-		 * the search string will be treated as a regular expression, when false
+		 * the searchs string will be treated as a regular expression, when false
 		 * (default) it will be treated as a straight string. When `smart`
 		 * DataTables will use it's smart filtering methods (to word match at
 		 * any point in the data), when false this will not be done.
@@ -11411,7 +11411,7 @@
 		 *  @example
 		 *    $(document).ready( function() {
 		 *      $('#example').dataTable( {
-		 *        "search": {"search": "Initial search"}
+		 *        "searchs": {"searchs": "Initial searchs"}
 		 *      } );
 		 *    } )
 		 */
@@ -11514,8 +11514,8 @@
 	
 		/**
 		 * Search delay option. This will throttle full table searches that use the
-		 * DataTables provided search input element (it does not effect calls to
-		 * `dt-api search()`, providing a delay before the search is made.
+		 * DataTables provided searchs input element (it does not effect calls to
+		 * `dt-api searchs()`, providing a delay before the searchs is made.
 		 *  @type integer
 		 *  @default 0
 		 *
@@ -12831,8 +12831,8 @@
 		"aoFooter": [],
 	
 		/**
-		 * Store the applied global search information in case we want to force a
-		 * research or compare the old search to a new one.
+		 * Store the applied global searchs information in case we want to force a
+		 * research or compare the old searchs to a new one.
 		 * Note that this parameter will be set by the initialisation routine. To
 		 * set a default use {@link DataTable.defaults}.
 		 *  @namespace
@@ -12841,7 +12841,7 @@
 		"oPreviousSearch": {},
 	
 		/**
-		 * Store the applied search for each column - see
+		 * Store the applied searchs for each column - see
 		 * {@link DataTable.models.oSearch} for the format that is used for the
 		 * filtering information for each column.
 		 *  @type array
@@ -13532,7 +13532,7 @@
 		 * * {boolean} Include the row in the searched result set (true) or not
 		 *   (false)
 		 *
-		 * Note that as with the main search ability in DataTables, technically this
+		 * Note that as with the main searchs ability in DataTables, technically this
 		 * is "filtering", since it is subtractive. However, for consistency in
 		 * naming we call it searching here.
 		 *
@@ -13540,10 +13540,10 @@
 		 *  @default []
 		 *
 		 *  @example
-		 *    // The following example shows custom search being applied to the
+		 *    // The following example shows custom searchs being applied to the
 		 *    // fourth column (i.e. the data[3] index) based on two input values
 		 *    // from the end-user, matching the data in a certain range.
-		 *    $.fn.dataTable.ext.search.push(
+		 *    $.fn.dataTable.ext.searchs.push(
 		 *      function( settings, data, dataIndex ) {
 		 *        var min = document.getElementById('min').value * 1;
 		 *        var max = document.getElementById('max').value * 1;
@@ -13701,7 +13701,7 @@
 		 *
 		 * Each column in DataTables has a type assigned to it, either by automatic
 		 * detection or by direct assignment using the `type` option for the column.
-		 * The type of a column will effect how it is ordering and search (plug-ins
+		 * The type of a column will effect how it is ordering and searchs (plug-ins
 		 * can also make use of the column type if required).
 		 *
 		 * @namespace
@@ -13751,14 +13751,14 @@
 	
 	
 			/**
-			 * Type based search formatting.
+			 * Type based searchs formatting.
 			 *
 			 * The type based searching functions can be used to pre-format the
-			 * data to be search on. For example, it can be used to strip HTML
+			 * data to be searchs on. For example, it can be used to strip HTML
 			 * tags or to de-format telephone numbers for numeric only searching.
 			 *
-			 * Note that is a search is not defined for a column of a given type,
-			 * no search formatting will be performed.
+			 * Note that is a searchs is not defined for a column of a given type,
+			 * no searchs formatting will be performed.
 			 * 
 			 * Pre-processing of searching data plug-ins - When you assign the sType
 			 * for a column (or have it automatically detected for you by DataTables
@@ -13782,7 +13782,7 @@
 			 *  @default {}
 			 *
 			 *  @example
-			 *    $.fn.dataTable.ext.type.search['title-numeric'] = function ( d ) {
+			 *    $.fn.dataTable.ext.type.searchs['title-numeric'] = function ( d ) {
 			 *      return d.replace(/\n/g," ").replace( /<.*?>/g, "" );
 			 *    }
 			 */
@@ -14261,7 +14261,7 @@
 	// Filter formatting functions. See model.ext.ofnSearch for information about
 	// what is required from these methods.
 	// 
-	// Note that additional search methods are added for the html numbers and
+	// Note that additional searchs methods are added for the html numbers and
 	// html formatted numbers by `_addNumericSort()` when we know what the decimal
 	// place is
 	
@@ -14314,7 +14314,7 @@
 	};
 	
 	
-	// Add the numeric 'deformatting' functions for sorting and search. This is done
+	// Add the numeric 'deformatting' functions for sorting and searchs. This is done
 	// in a function to provide an easy ability for the language options to add
 	// additional methods if a non-period decimal place is used.
 	function _addNumericSort ( decimalPlace ) {
@@ -14344,7 +14344,7 @@
 				// Add the ordering method
 				_ext.type.order[ key+decimalPlace+'-pre' ] = fn;
 	
-				// For HTML types add a search formatter that will strip the HTML
+				// For HTML types add a searchs formatter that will strip the HTML
 				if ( key.match(/^html\-/) ) {
 					_ext.type.search[ key+decimalPlace ] = _ext.type.search.html;
 				}
@@ -14684,7 +14684,7 @@
 
 	/**
 	 * Search event, fired when the searching applied to the table (using the
-	 * built-in global search, or column filters) is altered.
+	 * built-in global searchs, or column filters) is altered.
 	 *  @name DataTable#search.dt
 	 *  @event
 	 *  @param {event} e jQuery event object

@@ -93,3 +93,6 @@ Route::group(['prefix' => 'post/logged', 'middleware' => 'auth'], function () {
     Route::get('auth/{provider}', 'Auth\SocialController@redirectToProvider');
     Route::get('auth/{provider}/callback', 'Auth\SocialController@handleProviderCallback');
 
+    //searchs
+    Route::get('search', 'SearchController@search')->name('search');
+

@@ -5,7 +5,7 @@
 /**
  * @summary     AlphabetSearch
  * @description Show an set of alphabet buttons alongside a table providing
- *     search input options
+ *     searchs input options
  * @version     1.0.0
  * @file        dataTables.alphabetSearch.js
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
@@ -44,7 +44,7 @@ $.fn.dataTable.Api.register( 'alphabetSearch.recalc()', function ( searchTerm ) 
 
 // Search plug-in
 $.fn.dataTable.ext.search.push( function ( context, searchData ) {
-	// Ensure that there is a search applied to this table before running it
+	// Ensure that there is a searchs applied to this table before running it
 	if ( ! context.alphabetSearch ) {
 		return true;
 	}
@@ -111,7 +111,7 @@ $.fn.dataTable.AlphabetSearch = function ( context ) {
 
 	draw( table, alphabet );
 
-	// Trigger a search
+	// Trigger a searchs
 	alphabet.on( 'click', 'span', function () {
 		alphabet.find( '.active' ).removeClass( 'active' );
 		$(this).addClass( 'active' );
@@ -148,7 +148,7 @@ $.fn.dataTable.AlphabetSearch = function ( context ) {
 $.fn.DataTable.AlphabetSearch = $.fn.dataTable.AlphabetSearch;
 
 
-// Register a search plug-in
+// Register a searchs plug-in
 $.fn.dataTable.ext.feature.push( {
 	fnInit: function ( settings ) {
 		var search = new $.fn.dataTable.AlphabetSearch( settings );
