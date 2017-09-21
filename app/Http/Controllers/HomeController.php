@@ -23,6 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('post.logged.list');
+        return view('home');
     }
 }

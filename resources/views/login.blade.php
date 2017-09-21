@@ -12,7 +12,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <form action="{{url('/login')  }}" method="POST" role="form">
+            <form action="{{route('login')}}" method="POST" role="form">
                 <legend style= "color: #720e9e">Login</legend>
                 @if($errors->has('errorlogin'))
                     <div class="alert alert-danger">

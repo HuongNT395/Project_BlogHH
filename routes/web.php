@@ -13,12 +13,9 @@ use App\Post;
 |
 */
 Route::get('/', "PostController@getPost")->name('post.list');
+
   //liên quan đến post
 Route::group(['prefix' => 'post'], function() {
-
-
-
-    Route::get('/', "PostController@getPost")->name('post.list');
     Route::get('like', "PostController@getPostByLike")->name('post.like');
     Route::get('category', "PostController@getPostByCategory")->name('post.category');
     Route::get('time', "PostController@getPostTime")->name('post.time');
@@ -95,7 +92,7 @@ Route::group(['prefix' => 'post/logged', 'middleware' => 'auth'], function () {
             return view('login');
         })->name('login');
         Auth::routes();
-        Route::get('/home', 'HomeController@index')->name('home');
+//        Route::get('/home', 'HomeController@index')->name('home');
     //logout
     Route::get('/logout', "LoginController@logout")->name('logout');
     //fb
@@ -105,3 +102,7 @@ Route::group(['prefix' => 'post/logged', 'middleware' => 'auth'], function () {
     //searchs
     Route::get('search', 'SearchController@search')->name('search');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

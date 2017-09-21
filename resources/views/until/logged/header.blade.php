@@ -28,7 +28,7 @@
     <div id="pos">
         <header class="row">
             <div class="col-md-3">
-                <a href="/user/post/them">write a story</a>
+                <a href="{{route('post.logged.addForm')}}">write a story</a>
             </div>
             <div class="col-md-4">
                 <a href="#">News</a>
