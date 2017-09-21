@@ -42,7 +42,7 @@
                     {{--<img class="img-circle" src="{{asset('storage/images/avartar/'.Auth::user()->avatar)}}" style="width: 40px; height: 40px">--}}
 
                     <a href="{{route('user.post.list')}}" id="author_name">{{Auth::user()->name}}</a> /
-                    <a href="{{route('login')}}" >Logout</a>
+                    <a href="{{route('logout')}}" >Logout</a>
 
 
                 </p>
