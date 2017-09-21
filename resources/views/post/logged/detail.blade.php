@@ -9,8 +9,8 @@
             Email: <a href="mailto:{{$post->user->email}}">{{$post->user->email}}</a><br>
             <i>{{$post->updated_at}}</i>
         </div>
-    </div>
 
+    </div>
 </article>
 <article class="contents row">
     <img id="images" class="img-responsive" src="{{asset('storage/images/post/'. $post->image)}}">
