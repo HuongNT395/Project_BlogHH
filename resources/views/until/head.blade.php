@@ -15,7 +15,7 @@
     {{--start header--}}
     <header class="row">
         <div class="col-md-3">
-            <a href="">write a story</a>
+            <a href="{{route('login')}}">write a story</a>
         </div>
         <div class="col-md-4">
             <a href="#">News</a>
@@ -24,7 +24,7 @@
             <form>
                 <input type="text" name="search" placeholder="Search">
             </form>
-            <p><a href="">sign in</a> / <a href="#">sign up</a></p>
+            <p><a href="{{route('login')}}">sign in</a> / <a href="#">sign up</a></p>
         </div>
     </header>
     {{--end header--}}

@@ -87,9 +87,13 @@ Route::group(['prefix' => 'post/logged', 'middleware' => 'auth'], function () {
 
 
     //Login
+        Route::get('/login', function () {
+            return view('login');
+        })->name('login');
         Auth::routes();
         Route::get('/home', 'HomeController@index')->name('home');
-
+    //logout
+    Route::get('/logout', "LoginController@logout")->name('logout');
     //fb
     Route::get('auth/{provider}', 'Auth\SocialController@redirectToProvider');
     Route::get('auth/{provider}/callback', 'Auth\SocialController@handleProviderCallback');

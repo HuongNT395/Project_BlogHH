@@ -12,7 +12,8 @@ class PostUserController extends Controller
 {
     public function getDanhSach(){
         $post = Post::where('user_id','=',Auth::user()->id)->get();
-        return view('user.post.danhsach',['post'=> $post]);
+        $categories = Category::all();
+        return view('user.post.danhsach',['post'=> $post, 'categories' => $categories]);
     }
 
     public function getThem(){
@@ -64,8 +65,9 @@ class PostUserController extends Controller
 
 
     function getXoa(Request $request,$id){
+        $categories = Category::all();
         $post = Post::find($id);
-        return view('user.post.xoa',['post'=> $post]);
+        return view('user.post.xoa',['post'=> $post, 'categories' => $categories]);
     }
 
 
@@ -77,9 +79,9 @@ class PostUserController extends Controller
 
 
     public function getSua($id){
-        $category = Category::all();
+        $categories = Category::all();
         $post = Post::find($id);
-        return view('user.post.sua',['post'=>$post],['category'=>$category]);
+        return view('user.post.sua',['post'=>$post],['categories'=>$categories]);
     }
 
     public function postSua(Request $request, $id)
