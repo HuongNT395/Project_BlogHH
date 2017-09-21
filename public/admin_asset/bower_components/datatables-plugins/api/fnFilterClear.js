@@ -50,7 +50,7 @@ jQuery.fn.dataTableExt.oApi.fnFilterClear  = function ( oSettings )
 		}
 	}
 
-	/* Remove the search text for the column filters - NOTE - if you have input boxes for these
+	/* Remove the searchs text for the column filters - NOTE - if you have input boxes for these
 	 * filters, these will need to be reset
 	 */
 	for ( i=0, iLen=oSettings.aoPreSearchCols.length ; i<iLen ; i++ )

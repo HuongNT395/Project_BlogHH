@@ -52,3 +52,23 @@
             </ul>
         </nav>
     </div>
+    <header class="row">
+        <div class="col-md-3">
+            <a href="{{route('post.logged.addForm')}}">write a story</a>
+        </div>
+        <div class="col-md-4">
+            <a href="#">News</a>
+        </div>
+        <div class="col-md-5" style="text-align: center">
+            <form action="{{route('search')}}" method="get" role="search">
+                <input type="hidden" name="_token" value="{{csrf_token()}}">
+                <div class="input-group">
+                    <input type="text" name="keyword" placeholder="Search" style="margin-top: 5px">
+                </div>
+            </form>
+            <p>
+                <img class="img-circle" src="http://graph.facebook.com/{{Auth::user()->provider_id}}/picture" style="width: 40px; height: 40px">
+                                <a href="" id="author_name">{{Auth::user()->name}}</a>
+            </p>
+        </div>
+    </header>

@@ -31,8 +31,11 @@
             <a href="#">News</a>
         </div>
         <div class="col-md-5" style="text-align: center">
-            <form>
-                <input type="text" name="search" placeholder="Search">
+            <form action="{{route('search')}}" method="get" role="search">
+                <input type="hidden" name="_token" value="{{csrf_token()}}">
+                <div class="input-group">
+                    <input type="text" name="keyword" placeholder="Search" style="margin-top: 5px">
+                </div>
             </form>
             <p><a href="">sign in</a> / <a href="#">sign up</a></p>
         </div>
@@ -45,3 +48,5 @@
             @endforeach
         </ul>
     </nav>
+</div>
+
