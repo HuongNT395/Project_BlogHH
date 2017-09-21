@@ -16,6 +16,9 @@ Route::get('/', "PostController@getPost")->name('post.list');
   //liên quan đến post
 Route::group(['prefix' => 'post'], function() {
 
+
+
+    Route::get('/', "PostController@getPost")->name('post.list');
     Route::get('like', "PostController@getPostByLike")->name('post.like');
     Route::get('category', "PostController@getPostByCategory")->name('post.category');
     Route::get('time', "PostController@getPostTime")->name('post.time');
