@@ -58,8 +58,9 @@ class LoggedPostController extends Controller
     }
 
     public function displayAPost(Request $request, $id) {
+        $categories = Category::all();
         $post = Post::find($id);
-        return view('post.logged.detail', ["post" => $post]);
+        return view('post.logged.detail', ["post" => $post, 'categories' => $categories]);
     }
 
     //like a post
@@ -67,7 +68,7 @@ class LoggedPostController extends Controller
         $post = Post::find($id);
         $post->like++;
         $post->save();
-        return redirect(route('post.list'));
+        return redirect(route('post.logged.list'));
     }
 
     //add a post
@@ -96,5 +97,12 @@ class LoggedPostController extends Controller
         }
         $post->save();
         return redirect(route('post.logged.list'));
+    }
+
+    //xem tat ca post cua 1 category
+    public function displayByCategory(Request $request, $category_id) {
+        $categories = Category::all();
+        $posts = Post::where('category_id', $category_id)->get();
+        return view('post.logged.'.$category_id, ['posts' => $posts, 'categories' => $categories]);
     }
 }

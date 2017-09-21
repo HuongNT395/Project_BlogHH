@@ -30,4 +30,7 @@ class LoginController extends Controller
                 return redirect()->intended('/post/list');
             }
     }
+    public function logout() {
+        return redirect(route('login'));
+    }
 }

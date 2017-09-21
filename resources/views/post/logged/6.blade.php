@@ -1,7 +1,7 @@
 @include('until/logged/header')
 <article class="tops row">
     <p>
-        <a><b>Tops story</b></a>
+        <a><b>All post</b></a>
         {{--<a href="#" style="float: right"><b>More</b><span class="glyphicon glyphicon-chevron-right"></span></a>--}}
     </p>
     <ul>

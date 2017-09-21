@@ -35,7 +35,7 @@
                                     <img src="{{asset('storage/images/avartar/'.$postDay->user->avatar)}}" class="img-circle">
                                 </div>
                                 <div id="au_info">
-                                    <a href="#">{{$postDay->user->name}}</a><br>
+                                    <a href="{{route('user.post.list')}}">{{$postDay->user->name}}</a><br>
                                     <i>{{$postDay->updated_at}}</i>
                                 </div>
                             </div>
@@ -73,7 +73,7 @@
                                     <img src="{{asset('storage/images/avartar/'.$postTime->user->avatar)}}" class="img-circle">
                                 </div>
                                 <div id="au_info">
-                                    <a href="#">{{$postTime->user->name}}</a><br>
+                                    <a href="{{route('user.post.list')}}">{{$postTime->user->name}}</a><br>
                                     <i>{{$postTime->updated_at}}</i>
                                 </div>
                             </div>
@@ -111,7 +111,7 @@
                                     <img src="{{asset('storage/images/avartar/'.$postCategory->user->avatar)}}" class="img-circle">
                                 </div>
                                 <div id="au_info">
-                                    <a href="#">{{$postCategory->user->name}}</a><br>
+                                    <a href="{{route('user.post.list')}}">{{$postCategory->user->name}}</a><br>
                                     <i>{{$postCategory->updated_at}}</i>
                                 </div>
                             </div>

@@ -18,6 +18,10 @@ body a {
 }
 
 /*start header*/
+#pos {
+    width: 100%;
+    position: sticky;
+}
 header {
     border-bottom: 1px solid #eee;
 }

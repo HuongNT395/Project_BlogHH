@@ -31,6 +31,7 @@ Route::group(['prefix' => 'post/logged', 'middleware' => 'auth'], function () {
     Route::get('category', "LoggedPostController@getPostByCategory")->name('post.logged.category');
     Route::get('time', "LoggedPostController@getPostTime")->name('post.logged.time');
     Route::get('detail/{id}', "LoggedPostController@displayAPost")->name('post.logged.detail');
+    Route::get('category/{id}', "LoggedPostController@displayByCategory")->name('post.logged.byCategory');
 
 });
 
@@ -86,9 +87,13 @@ Route::group(['prefix' => 'post/logged', 'middleware' => 'auth'], function () {
 
 
     //Login
+        Route::get('/login', function () {
+            return view('login');
+        })->name('login');
         Auth::routes();
         Route::get('/home', 'HomeController@index')->name('home');
-
+    //logout
+    Route::get('/logout', "LoginController@logout")->name('logout');
     //fb
     Route::get('auth/{provider}', 'Auth\SocialController@redirectToProvider');
     Route::get('auth/{provider}/callback', 'Auth\SocialController@handleProviderCallback');

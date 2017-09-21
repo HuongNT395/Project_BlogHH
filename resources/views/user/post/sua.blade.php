@@ -29,7 +29,7 @@
                         <div class="form-group">
                             <label>Thể loại</label>
                             <select class="form-control" name="category">
-                                @foreach($category as $cate)
+                                @foreach($categories as $cate)
                                     <option
                                         @if($post-> category->id == $cate->id)
                                             {{"selected"}}

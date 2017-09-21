@@ -1,4 +1,4 @@
-@include('until/logged/head')
+@include('until/logged/header')
 <article class="tops row">
     <p>
         <a><b>Posts by category</b></a>

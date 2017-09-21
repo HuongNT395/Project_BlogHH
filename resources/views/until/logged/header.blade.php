@@ -24,6 +24,7 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 <div class="container">
     {{--start header--}}
+<<<<<<< HEAD
     <header class="row">
         <div class="col-md-3">
             <a href="/user/post/them">write a story</a>
@@ -45,3 +46,31 @@
             </p>
         </div>
     </header>
+    <div id="pos">
+        <header class="row">
+            <div class="col-md-3">
+                <a href="{{route('post.logged.addForm')}}">write a story</a>
+            </div>
+            <div class="col-md-4">
+                <a href="#">News</a>
+            </div>
+            <div class="col-md-5" style="text-align: center">
+                <form>
+                    <input type="text" name="search" placeholder="Search" style="margin-top: 5px">
+                </form>
+                <p>
+                    <img class="img-circle" src="http://graph.facebook.com/{{Auth::user()->provider_id}}/picture" style="width: 40px; height: 40px">
+                    {{--<img class="img-circle" src="{{asset('storage/images/avartar/'.Auth::user()->avatar)}}" style="width: 40px; height: 40px">--}}
+                    <a href="{{route('user.post.list')}}" id="author_name">{{Auth::user()->name}}</a> /  <a href="">Logout</a>
+                </p>
+            </div>
+        </header>
+        <nav class="row">
+            <ul>
+                <li><a href="{{route('post.logged.list')}}">Home</a></li>
+                @foreach($categories as $category)
+                    <li><a href="{{route('post.logged.byCategory', ['id' => $category->id])}}">{{$category->name}}</a></li>
+                @endforeach
+            </ul>
+        </nav>
+    </div>
