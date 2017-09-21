@@ -5,7 +5,7 @@
             <img src="{{asset('storage/images/avartar/'. $post->user->avatar)}}" class="img-circle">
         </div>
         <div class="col-md-9">
-            <a href="#"><b>{{$post->user->name}}</b></a><br>
+            <a href="{{route('user.post.list')}}"><b>{{$post->user->name}}</b></a><br>
             Email: <a href="mailto:{{$post->user->email}}">{{$post->user->email}}</a><br>
             <i>{{$post->updated_at}}</i>
         </div>

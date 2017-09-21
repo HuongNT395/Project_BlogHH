@@ -28,7 +28,7 @@
     <div id="pos">
         <header class="row">
             <div class="col-md-3">
-                <a href="{{route('post.logged.addForm')}}">write a story</a>
+                <a href="{{route('addPost')}}">write a story</a>
             </div>
             <div class="col-md-4">
                 <a href="#">News</a>
@@ -38,11 +38,11 @@
                     <input type="text" name="search" placeholder="Search" style="margin-top: 5px">
                 </form>
                 <p>
-                    <img class="img-circle" src="http://graph.facebook.com/{{Auth::user()->provider_id}}/picture" style="width: 40px; height: 40px">
-                    {{--<img class="img-circle" src="{{asset('storage/images/avartar/'.Auth::user()->avatar)}}" style="width: 40px; height: 40px">--}}
+{{--                    <img class="img-circle" src="http://graph.facebook.com/{{Auth::user()->provider_id}}/picture" style="width: 40px; height: 40px">--}}
+                    <img class="img-circle" src="{{asset('storage/images/avartar/'.Auth::user()->avatar)}}" style="width: 40px; height: 40px">
 
                     <a href="{{route('user.post.list')}}" id="author_name">{{Auth::user()->name}}</a> /
-                    <a href="{{route('login')}}" >Logout</a>
+                    <a href="{{route('logout')}}" >logout</a>
 
 
                 </p>

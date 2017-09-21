@@ -79,6 +79,7 @@
         <!-- /.container-fluid -->
     </div>
     <!-- /#page-wrapper -->
+@include('until/footer')
 
 
 

@@ -26,7 +26,7 @@
                 <input type="text" name="search" placeholder="Search">
             </form>
 
-            <p><a href="{{route('login')}}">sign in</a> / <a href="{{route('login')}}">sign up</a></p>
+            <p><a href="{{route('login')}}">login</a> / <a href="{{route('login')}}">register</a></p>
         </div>
     </header>
     {{--end header--}}
