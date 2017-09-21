@@ -48,7 +48,7 @@
 
                     <!-- Branding Image -->
 
-                    <a class="navbar-brand" href="/post/logged/list">
+                    <a class="navbar-brand" href="{{route('post.logged.list')}}">
                         BlogHH
 
                     </a>
@@ -74,7 +74,7 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="/post/list"
+                                        <a href="{{route('login')}}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                             Logout
