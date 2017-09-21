@@ -11,4 +11,5 @@ class MainController extends Controller
         $category = CategoryController::getCategories();
         return view('until.head', ["categories" => $category]);
     }
+//    bbbbbbbb
 }
