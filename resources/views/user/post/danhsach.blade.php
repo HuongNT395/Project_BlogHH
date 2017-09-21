@@ -3,6 +3,11 @@
     <!-- Page Content -->
     <div id="page-wrapper">
         <div class="container">
+         @if(session('thongbao'))
+                            <div class="alert alert-success">
+                                {{session('thongbao')}}
+                            </div>
+                        @endif
             @foreach($post as $p)
             <div class="disPost">
                 <div class="form-group">

@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use Validator;
 use Illuminate\Support\Facades\Auth;
+use Validator;
 use Illuminate\Support\MessageBag;
 use App\Http\Requests\UserRequest;
 class LoginController extends Controller
@@ -30,6 +30,7 @@ class LoginController extends Controller
                 return redirect()->intended('/post/logged/list');
             }
     }
+
     public function logout() {
         Auth::logout();
         return redirect('/');
