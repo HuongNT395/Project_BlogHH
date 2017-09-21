@@ -24,6 +24,7 @@
             <form>
                 <input type="text" name="search" placeholder="Search">
             </form>
+            <p><a href="/login">sign in</a> / <a href="/login">sign up</a></p>
             <p><a href="{{route('login')}}">sign in</a> / <a href="#">sign up</a></p>
         </div>
     </header>

@@ -29,7 +29,7 @@
             </tr>
             <tr>
                 <td nowrap="nowrap"></td>
-                <td><h3></h3></td>
+                <td><h3>Summary</h3></td>
             </tr>
             <tr>
                 <td nowrap="nowrap"></td>
