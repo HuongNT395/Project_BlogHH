@@ -22,9 +22,9 @@ class AdmiLoginMiddleware
             if($user->active == 1)
                 return $next($request);
             else
-                return redirect('login');
+                return redirect('/post/logged/list');
         }
         else
-            return redirect('login');
+            return redirect('/login');
     }
 }
