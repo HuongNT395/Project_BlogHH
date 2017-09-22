@@ -5,11 +5,11 @@
             <div style="text-align: center">
                    <form class="form-group" method="post" action="{{route('user.post.delete', ['id'=> $post->id])}}">
                        <input type="hidden" name="_token" value="{{csrf_token()}}">
-                       <h2 style="color: red">Bạn chắc chắn xóa bài viết?</h2>
+                       <h2 style="color: red">Are you sure delete this post?</h2>
                        <h3>{{$post->title}}</h3>
-                       <input type="button"  value="Quay lại" class="btn btn-info"
+                       <input type="button"  value="Back" class="btn btn-info"
                               onclick="location.href='{{route('user.post.list')}}'">
-                       <button type="submit" class="btn btn-warning">Xóa</button>
+                       <button type="submit" class="btn btn-warning">Delete</button>
                    </form>
             </div>
         </div>

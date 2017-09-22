@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-10">
                     <h1 class="page-header">
-                        <p style="text-align: center; color: blue">Sửa bài viết</p>
+                        <p style="text-align: center; color: blue">Edit a Post</p>
                     </h1>
                 </div>
                 <!-- /.col-lg-12 -->
@@ -27,7 +27,7 @@
                     <form action="../sua/{{$post->id}}" method="post" enctype="multipart/form-data">
                         <input type="hidden" name="_token" value={{csrf_token()}}>
                         <div class="form-group">
-                            <label>Thể loại</label>
+                            <label>Category</label>
                             <select class="form-control" name="category">
                                 @foreach($categories as $cate)
                                     <option
@@ -41,17 +41,17 @@
 
                         </div>
                         <div class="form-group">
-                            <label>Tiêu đề</label>
+                            <label>Title</label>
                             <input type="text" class="form-control" name="title" value="{{$post->title}}"/>
                         </div>
 
                         <div class="form-group">
-                            <label>Tóm tắt</label>
+                            <label>Summary</label>
                             <textarea id="demo" class="form-control ckeditor" rows="2" name="summary">{{$post->summary}}</textarea>
                         </div>
 
                         <div class="form-group">
-                            <label>Nội dung</label>
+                            <label>Content</label>
                             <textarea id="demo" class="form-control ckeditor" rows="5" name="conten" >{{$post->content}}</textarea>
                         </div>
 
@@ -68,8 +68,8 @@
                             </div>
                         </div>
                         <div style="text-align: center">
-                        <button type="submit" class="btn btn-info">Sửa bài viết</button>
-                        <input type="button" value="Quay lại" class="btn btn-info" onclick="location.href='../user/post/danhsach'">
+                        <button type="submit" class="btn btn-info">Edit</button>
+                        <input type="button" value="Back" class="btn btn-info" onclick="location.href='../user/post/danhsach'">
                         </div>
                     </form>
                 </div>
