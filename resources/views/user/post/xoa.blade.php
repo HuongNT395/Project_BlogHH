@@ -1,5 +1,5 @@
 @include('until/logged/header')
-<div id="page-wrapper">
+<div id="page-wrapper" style="margin-bottom: 215px">
     <div class="container">
         <div class="row">
             <div style="text-align: center">
