@@ -38,7 +38,7 @@ return [
     'facebook' => [
         'client_id' => '246006722589120',
         'client_secret' => '16d60247f55b53ddd5eab22323e29e90',
-        'redirect' => 'http://localhost:8000/auth/facebook/callback',
+        'redirect' => 'http://c0717g-3.codegym.vn/auth/facebook/callback',
     ],
 
 ];
