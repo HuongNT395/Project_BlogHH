@@ -13,8 +13,7 @@
     <title>H2News</title>
 </head>
 <body>
-<div id="fb-root"></div>
-<div id="fb-root"></div>
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
